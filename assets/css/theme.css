@@ -6428,10 +6428,11 @@ reviews-block
 .reviews-block__person-image {
   width: 60px;
   min-width: 60px;
-  height: 60px;
+  margin-left: 60px;
+  /* height: 60px;
   border-radius: 100%;
-  overflow: hidden;
-  margin-right: 23px;
+  overflow: hidden; */
+  /* margin-right: 23px; */
 }
 
 .reviews-block__person-image img {
@@ -7983,6 +7984,7 @@ zoom-counter
   line-height: 1.75;
   color: #666;
   margin-bottom: 103px;
+  text-align: justify;
 }
 
 .zoom-counter__text p {
@@ -8051,8 +8053,8 @@ zoom-counters
 */
 
 .zoom-counters {
-  padding-top: 75px;
-  padding-bottom: 100px;
+  /* padding-top: 75px;
+  padding-bottom: 100px; */
 }
 
 .zoom-counters__item {
@@ -8144,11 +8146,16 @@ zoom-image-head
 }
 
 .zoom-image-head__subtitle {
-  font-size: 24px;
+  /* font-size: 24px;
   line-height: 1.666666666666667;
   font-weight: 100;
   font-weight: 500;
-  margin-bottom: 34px;
+  margin-bottom: 34px; */
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  margin-left: 90px;
+  margin-top: -34px;
 }
 
 .zoom-image-head__subtitle strong {
@@ -8156,13 +8163,18 @@ zoom-image-head
 }
 
 .zoom-image-head__title {
-  font-family: 'Teko', Helvetica, sans-serif;
+  /* font-family: 'Teko', Helvetica, sans-serif;
   font-size: 110px;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 0.909090909090909;
   margin-bottom: 57px;
-  margin-bottom: 5vh;
+  margin-bottom: 5vh; */
+  font-family: 'Teko', Helvetica, sans-serif;
+  font-size: 150px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 0.909090909090909;
 }
 
 .zoom-image-head__text {
@@ -8557,6 +8569,9 @@ zoom-slider
 
 .zoom-slider__control_next {
   right: 60px;
+}
+.whatsapp-icon{
+  float: right;
 }
 
 @media only screen and (max-height: 600px) {
