@@ -8130,7 +8130,7 @@ zoom-image-head
 
 .zoom-image-head__bg2 {
   position: absolute;
-  left: 0;
+  left: 18%;
   bottom: -90px;
   width: 100%;
   z-index: 2;
