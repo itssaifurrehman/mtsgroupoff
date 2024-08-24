@@ -27,6 +27,9 @@
   .container{
     padding-top: 12%;
   }
+  .header-fixed {
+    bottom: 8px;
+  }
   .article-listing-item__content {
     padding: 40px;
   }
@@ -146,6 +149,9 @@
 @media only screen and (max-width: 991px) {
   .container{
     padding-top: 12%;
+  }
+  .header-fixed {
+    bottom: 8px;
   }
   .article-listing-item {
     display: block;
