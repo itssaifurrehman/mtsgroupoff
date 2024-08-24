@@ -24,6 +24,9 @@
 }
 
 @media only screen and (max-width: 1199px) {
+  .container{
+    padding-top: 12%;
+  }
   .article-listing-item__content {
     padding: 40px;
   }
@@ -141,6 +144,9 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .container{
+    padding-top: 12%;
+  }
   .article-listing-item {
     display: block;
   }
