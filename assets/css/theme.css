@@ -317,6 +317,11 @@ body {
   font-size: 14px;
   background: #fff;
   color: #000;
+  /* display: flex;
+  justify-content: center; /* Center horizontally */
+  /* align-items: flex-start; Align vertically to the top */
+  /* height: 100vh; Full viewport height */
+  /* margin: 0; * */
 }
 
 main {
@@ -3471,6 +3476,7 @@ header
   /* top: 30px; */
   z-index: 3;
   position: fixed;
+  /* top: 10px; */
   /* background: #242323; */
   color: white;
 }
@@ -3493,7 +3499,7 @@ header
 
 .header__container {
   width: 100%;
-  /* padding-top: 50px; */
+  margin-top: 10%;
   padding-bottom: 1px;
 }
 
@@ -6427,18 +6433,34 @@ reviews-block
 }
 
 .reviews-block__person-image {
+  position: absolute; /* Allows positioning relative to the parent */
+  top: 15px; /* Position from the top */
+  left: 50%; /* Aligns horizontally in the center */
+  transform: translateX(-50%); /* Adjusts for the element's own width */
+  width: 100px; /* Fixed width */
+  height: 110px; /* Fixed height */
+  overflow: hidden;
+  /* margin-bottom: 15px; */
+}
+.reviews-block__person-image img {
+  width: 100%; /* Ensures the image fills the container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* .reviews-block__person-image {
   width: 100px;
   min-width: 60px;
   /* margin-left: 60px; */
-  height: 110px;
+  /* height: 110px; */
   /* border-radius: 100%; */
-  overflow: hidden;
+  /* overflow: hidden;
   margin-left: 50%;
-}
+  margin-bottom: 15px; 
+}*/
 
-.reviews-block__person-image img {
+/* .reviews-block__person-image img {
   width: 100%;
-}
+} */
 
 .reviews-block__quote {
   width: auto !important;
@@ -8157,11 +8179,12 @@ zoom-image-head
   margin-bottom: 35px;
   margin-left: 90px;
   margin-top: -34px; */
-  font-size: 69px;
-  font-weight: bold;
+  font-size: 111px;
+    font-weight: bold;
   /* margin-bottom: 35px; */
   /* margin-left: 90px; */
-  margin-top: -34px;
+  margin-top: -70px;
+  font-family: 'Teko', Helvetica, sans-serif;
 }
 
 .zoom-image-head__subtitle strong {
@@ -8169,19 +8192,21 @@ zoom-image-head
 }
 
 .zoom-image-head__title {
-  /* font-family: 'Teko', Helvetica, sans-serif;
+   font-family: 'Teko', Helvetica, sans-serif;
   font-size: 110px;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 0.909090909090909;
-  margin-bottom: 57px;
-  margin-bottom: 5vh; */
-  font-family: 'Teko', Helvetica, sans-serif;
+  margin-bottom: 1vh;
+  /* margin-bottom: 57px; */
+  /* margin-bottom: 5vh; 
+     */
+  /* font-family: 'Teko', Helvetica, sans-serif;
   font-size: 112px;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 0.909090909090909;
-  margin-top: 15%;
+  margin-top: 15%; */
 }
 
 .zoom-image-head__text {
@@ -8189,12 +8214,13 @@ zoom-image-head
   line-height: 1.222222222222222;
   color: white;
   line-height: 1.666666666666667;
+  margin-top: -15px;
 }
 
 .zoom-image-head__icon {
   color: #f24a00;
   font-size: 60px;
-  margin-top: 120px;
+  margin-top: 105px;
   /* margin-top: 9vh; */
 }
 
