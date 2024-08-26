@@ -3503,6 +3503,15 @@ header
   padding-bottom: 1px;
 }
 
+.containerDemo{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 4%;
+  margin-right: auto;
+  padding-top: 14%;
+  /* margin-left: auto; */
+}
+
 .header_fixed .header__container {
   transform: translateY(0%);
 }
@@ -8156,7 +8165,7 @@ zoom-image-head
 .zoom-image-head__bg2 {
   position: absolute;
   /* left: 18%; */
-  bottom: -5%;
+  bottom: -9%;
   width: 100%;
   z-index: 2;
 }
@@ -8214,7 +8223,7 @@ zoom-image-head
   line-height: 1.222222222222222;
   color: white;
   line-height: 1.666666666666667;
-  margin-top: -15px;
+  margin-top: -45px;
 }
 
 .zoom-image-head__icon {

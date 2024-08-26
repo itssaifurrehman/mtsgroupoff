@@ -1,8 +1,8 @@
 @media (min-width: 1200px) {
   .container {
     padding-right: 60px;
-    padding-left: 0px;
-    padding-top: 12%;
+    /* padding-left: 6p x; */
+    padding-top: 13%;
   }
 
   .container-fluid {
@@ -25,7 +25,7 @@
 
 @media only screen and (max-width: 1199px) {
   .container{
-    padding-top: 12%;
+    padding-top: 13%;
   }
   .header-fixed {
     bottom: 8px;
@@ -148,7 +148,7 @@
 
 @media only screen and (max-width: 991px) {
   .container{
-    padding-top: 12%;
+    padding-top: 13%;
   }
   .header-fixed {
     bottom: 8px;
