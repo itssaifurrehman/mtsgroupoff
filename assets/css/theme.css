@@ -3511,6 +3511,9 @@ header
   padding-top: 14%;
   /* margin-left: auto; */
 }
+.containerDemo2{
+  padding-left: 10%;
+}
 
 .header_fixed .header__container {
   transform: translateY(0%);
@@ -7963,7 +7966,7 @@ zoom-counter
   font-size: 250px;
   line-height: 1;
   font-family: 'Teko', Helvetica, sans-serif;
-  margin-left: -2px;
+  margin-left: -10%;
   color: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -8012,11 +8015,19 @@ zoom-counter
 }
 
 .zoom-counter__text {
-  font-size: 16px;
+  /* font-size: 17px;
   line-height: 1.75;
   color: #666;
   margin-bottom: 103px;
+  text-align: justify; */
+  font-size: 16px;
+  line-height: 1.75;
+  color: #666;
+  margin-bottom: 100px;
   text-align: justify;
+  text-justify: inter-word; /* Ensures spacing is adjusted between words rather than expanding them */
+  hyphens: auto; /* Enables hyphenation to break long words if needed */
+  word-spacing: 0.05em;
 }
 
 .zoom-counter__text p {
@@ -8092,7 +8103,7 @@ zoom-counters
 .zoom-counters__item {
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
 .zoom-counters__value {
@@ -8100,7 +8111,7 @@ zoom-counters
   line-height: 1;
   font-family: 'Teko', Helvetica, sans-serif;
   position: relative;
-  margin-right: 28px;
+  /* margin-right: 28px; */
   visibility: hidden;
 }
 
@@ -8112,13 +8123,22 @@ zoom-counters
 }
 
 .zoom-counters__text {
-  padding-top: 11px;
+  padding-top: 13px;
+  margin-left: 10px;
   font-size: 20px;
   line-height: 1.4;
   text-transform: uppercase;
   color: #666;
 }
 
+.zoom-counters__text3 {
+  padding-top: 13px;
+  margin-left: 10%;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #666;
+}
 /*
 zoom-image-head
 */
@@ -8323,41 +8343,12 @@ zoom-posts
 zoom-services
 */
 
-.zoom-services__title {
-  font-size: 16px;
-  line-height: 1.125;
-  text-transform: uppercase;
-  font-weight: 600;
-  background: #f14201;
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  padding: 4px 6px 1px;
-  margin-bottom: 70px;
-}
-
-.zoom-services__title:empty {
-  opacity: 0;
-}
-
-.zoom-services__wrapper {
-  margin-bottom: 70px;
-}
-
-.zoom-services__wrapper_bordered {
-  margin-bottom: 0;
-  padding-bottom: 100px;
-  border-bottom: 1px solid #e6e6e6;
-}
-
+/* 
 .zoom-services__list {
-  display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  border-left: 1px solid #e6e6e6;
-  border-top: 1px solid #e6e6e6;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .zoom-services__item {
@@ -8366,12 +8357,14 @@ zoom-services
   display: block;
   text-decoration: none;
   color: currentColor;
-  border-right: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
   transition: all 0.3s;
   position: relative;
   background: #fff;
+  box-sizing: border-box;
 }
+
+
 
 .zoom-services__item:hover {
   background: #f14201;
@@ -8414,7 +8407,108 @@ zoom-services
 .zoom-services__item-icon {
   font-size: 48px;
   display: block;
-  color: #f14201;
+  color: #ffc953;
+  margin-bottom: 46px;
+  transition: all 0.3s;
+} */
+
+
+
+
+ .zoom-services__title {
+  font-family: 'Teko', Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.125;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #f14201;
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  padding: 5px 6px 1px;
+  margin-bottom: 20px;
+}
+
+
+
+.zoom-services__title:empty {
+  opacity: 0;
+}
+
+.zoom-services__wrapper {
+  margin-bottom: 70px;
+}
+
+.zoom-services__wrapper_bordered {
+  margin-bottom: 0;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+.zoom-services__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.zoom-services__item {
+  width: 30%;
+  padding: 30px 32px 172px;
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+  border: 1px solid #e6e6e6; /* Set border for all sides */
+  transition: all 0.3s;
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+
+.zoom-services__item:hover {
+  background: #f14201;
+  color: #fff;
+}
+
+.zoom-services__item-title {
+  font-size: 30px;
+  line-height: 1;
+  font-family: 'Teko', Helvetica, sans-serif;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.zoom-services__item-text {
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+  color: #999;
+  transition: all 0.3s;
+}
+
+.zoom-services__item:hover .zoom-services__item-text {
+  color: #fff;
+}
+
+.zoom-services__item-footer {
+  display: block;
+  position: absolute;
+  left: 32px;
+  bottom: 24px;
+}
+
+.zoom-services__more {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.zoom-services__item-icon {
+  font-size: 48px;
+  display: block;
+  color: #ffc953;
   margin-bottom: 46px;
   transition: all 0.3s;
 }

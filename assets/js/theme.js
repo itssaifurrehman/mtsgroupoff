@@ -96,13 +96,13 @@
           }).animate({
             count: $(this).attr('data-counter-value')
           }, {
-            duration: 2000,
+            duration: 2500,
             easing: 'swing',
             step: function step() {
               var mathCount = Math.ceil(this.count);
               thisElement.text(mathCount.toLocaleString('en-IN', {
                 maximumSignificantDigits: 3
-              }));
+              })+ '+');
             }
           });
         }
