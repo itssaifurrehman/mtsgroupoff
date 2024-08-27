@@ -7985,6 +7985,14 @@ zoom-counter
   position: relative;
   z-index: 2;
 }
+.zoom-counter__card-description1 {
+  color: #fff;
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
 
 .zoom-counter__info {
   -ms-flex-positive: 1;
@@ -8025,7 +8033,7 @@ zoom-counter
   line-height: 1.75;
   color: #666;
   margin-bottom: 100px;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word; /* Ensures spacing is adjusted between words rather than expanding them */
   hyphens: auto; /* Enables hyphenation to break long words if needed */
   word-spacing: 0.05em;
