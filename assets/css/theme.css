@@ -7690,6 +7690,7 @@ header-fixed
   flex-wrap: wrap;
   -ms-flex-align: start;
   align-items: flex-start;
+  font-size: 17px;
 }
 
 .top-menu__menu-item:not(:last-child) {
