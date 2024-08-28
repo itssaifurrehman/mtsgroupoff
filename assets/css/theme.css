@@ -8157,6 +8157,10 @@ zoom-counter
   min-width: 34.3%;
   position: relative;
   margin-right: 14.4%;
+  transition: background-position 1s ease-in-out; /* Smooth animation for background */
+}
+.zoom-counter__card.animate {
+  background-position: 50% 100%; /* Move the background image */
 }
 
 .zoom-counter__card:before {
@@ -8402,7 +8406,7 @@ zoom-image-head
   width: 100%;
   height: 120%;
   left: 0;
-  top: -25%;
+  top: -22%;
   z-index: 1;
 }
 
@@ -8420,7 +8424,7 @@ zoom-image-head
 .zoom-image-head__bg2 {
   position: absolute;
   /* left: 18%; */
-  bottom: -10%;
+  bottom: -8%;
   width: 100%;
   z-index: 2;
 }
@@ -8486,7 +8490,7 @@ zoom-image-head
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   font-size: 60px;
-  margin-top: 105px;
+  margin-top: 130px;
   /* margin-top: 9vh; */
 }
 

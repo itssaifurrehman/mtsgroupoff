@@ -139,6 +139,20 @@
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  window.addEventListener('scroll', function() {
+    var card = document.querySelector('.zoom-counter__card');
+    var rect = card.getBoundingClientRect();
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  
+    // Check if the card is in view
+    if (rect.top <= windowHeight && rect.bottom >= 0) {
+      card.classList.add('animate');
+    } else {
+      card.classList.remove('animate'); // Optional: remove the class if not in view
+    }
+  });
+
+
   $('.animsition').animsition({
     inClass: 'fade-in',
     outClass: 'fade-out',
