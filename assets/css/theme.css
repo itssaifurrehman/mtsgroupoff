@@ -8151,7 +8151,7 @@ zoom-counter
   padding: 54px 59px 60px 66px;
   background-size: cover;
   background-position: 50%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 80px;
   width: 34.3%;
   min-width: 34.3%;
@@ -8212,7 +8212,7 @@ zoom-counter
   position: relative;
   z-index: 2;
   font-family: 'Homemade Apple', cursive;
-  text-align: right;
+  text-align: center;
 }
 
 .zoom-counter__info {
@@ -8400,7 +8400,7 @@ zoom-image-head
 .zoom-image-head__bg {
   position: absolute;
   width: 100%;
-  height: 115%;
+  height: 117%;
   left: 0;
   top: -22%;
   z-index: 1;
@@ -8420,7 +8420,7 @@ zoom-image-head
 .zoom-image-head__bg2 {
   position: absolute;
   /* left: 18%; */
-  bottom: -9%;
+  bottom: -12%;
   width: 100%;
   z-index: 2;
 }
@@ -8759,7 +8759,7 @@ zoom-services
 }
 
 .zoom-services__item:hover .zoom-services__item-icon {
-  color: #fff;
+  color: white;
 }
 
 /*
