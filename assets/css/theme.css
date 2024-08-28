@@ -2744,7 +2744,7 @@ footer-studio
   padding-bottom: 15px;
   background-size: cover;
   background-position: 50%;
-  background-color: #252525;
+  background-color: black;
   color: #fff;
   font-size: 16px;
   line-height: 1.875;
@@ -8712,7 +8712,7 @@ zoom-services
 
 .zoom-services__item:hover {
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
-  color: #fff;
+  color: black;
 }
 
 .zoom-services__item-title {
@@ -8733,7 +8733,7 @@ zoom-services
 }
 
 .zoom-services__item:hover .zoom-services__item-text {
-  color: #fff;
+  color: black;
 }
 
 .zoom-services__item-footer {
@@ -8751,7 +8751,8 @@ zoom-services
 .zoom-services__item-icon {
   font-size: 48px;
   display: block;
-  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  background: orangered;
+  /* background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e); */
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   margin-bottom: 46px;
