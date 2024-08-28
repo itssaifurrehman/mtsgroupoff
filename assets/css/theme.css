@@ -8443,9 +8443,6 @@ zoom-image-head
 }
 
 .zoom-image-head__subtitle {
-  background: radial-gradient(circle, #f9b340, #e9c16b, #fedf9e, #dbb04e);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
   /* font-size: 24px;
   line-height: 1.666666666666667;
   font-weight: 100;
@@ -8475,9 +8472,6 @@ zoom-image-head
   font-weight: 600;
   line-height: 0.909090909090909;
   margin-bottom: 1vh;
-  background: radial-gradient(circle, #f9b340, #e9c16b, #fedf9e, #dbb04e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   /* margin-bottom: 57px; */
   /* margin-bottom: 5vh; 
      */
@@ -8502,7 +8496,7 @@ zoom-image-head
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   font-size: 60px;
-  margin-top: 13%;
+  margin-top: 16%;
 }
 
 /*
@@ -8727,7 +8721,7 @@ zoom-services
 }
 
 .small-text {
-  font-size: 38px; /* Font size for "Our" */
+  font-size: 42px; /* Font size for "Our" */
 }
 
 .large-text {
@@ -8748,7 +8742,7 @@ zoom-services
 .zoom-services__wrapper_bordered {
   margin-bottom: 0;
   padding-bottom: 100px;
-  border-bottom: 1px solid #e6e6e6;
+  /* border-bottom: 1px solid #e6e6e6; */
 }
 
 
