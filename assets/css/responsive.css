@@ -350,6 +350,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+
+  .zoom-image-head__icon{
+    margin-top: 1px;
+  }
   .article-listing-item__content {
     padding: 20px;
   }
@@ -737,8 +741,8 @@
   }
 
   .zoom-image-head__title {
-    font-size: 80px;
-    margin-bottom: 40px;
+    /* font-size: 80px; */
+    /* margin-bottom: 40px; */
   }
 
   .zoom-services__list {
@@ -759,6 +763,11 @@
 }
 
 @media only screen and (max-width: 575px) {
+  .reviews-block__person-image{
+    min-width: 40px;
+    width: 100px;
+    height: 100px;
+  }
   .awards-block__item {
     display: block;
   }
@@ -863,7 +872,7 @@
   }
 
   .zoom-image-head__subtitle {
-    font-size: 20px;
+    /* font-size: 20px; */
   }
 
   .zoom-image-head__subtitle {
@@ -871,11 +880,19 @@
   }
 
   .zoom-image-head__title {
-    font-size: 60px;
-    margin-bottom: 30px;
+    /* font-size: 60px;
+    margin-bottom: 30px; */
+    /* margin-bottom: 25%; */
   }
 
   .zoom-image-head__text {
     font-size: 16px;
+  }
+  .zoom-image-head__bg2{
+    display: none;
+  }
+  .containerDemo{
+    padding-top: 0;
+    padding-left: 5%;
   }
 }
