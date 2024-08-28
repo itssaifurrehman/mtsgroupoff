@@ -450,7 +450,7 @@
         if (scroll >= nav_offset_top) {
           $('.header_fixed').addClass('header_is_fixed');
           headerContainer.style.top = "-".concat(headerContainer.offsetHeight, "px");
-          $('.header_fixed').css('background-color', '#242323');
+          $('.header_fixed').css('background-color', 'black');
         } else {
           $('.header_fixed').removeClass('header_is_fixed');
           headerContainer.style.top = '';
