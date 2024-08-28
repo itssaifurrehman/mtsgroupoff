@@ -8211,13 +8211,15 @@ zoom-counter
 }
 .zoom-counter__card-description1 {
   color: #fff;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.25;
-  /* font-weight: 600; */
+  font-weight: 600;
   position: relative;
   z-index: 2;
-  font-family: 'Homemade Apple', cursive;
-  text-align: center;
+  /* font-family: 'Teko', Helvetica, sans-serif; */
+
+  /* font-family: 'Homemade Apple', cursive; */
+  /* text-align: center; */
 }
 
 .zoom-counter__info {

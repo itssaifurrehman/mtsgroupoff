@@ -341,7 +341,7 @@ main {
 }
 
 .zoom-counter__card:before {
-  background: #242323;
+  background: black;
 }
 
 .zoom-counter__card-title,
