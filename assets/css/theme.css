@@ -8779,6 +8779,9 @@ zoom-services
   color: black;
 }
 
+.zoom-services-padding{
+  padding: 15px 30px 30px 30px !important;
+}
 
 .zoom-services-item-image {
   transition: transform 1s ease-in-out; /* Smooth zoom animation */
