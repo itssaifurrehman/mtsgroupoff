@@ -8711,7 +8711,7 @@ zoom-services
   text-transform: uppercase;
   font-weight: 600;
   /* line-height: 1;  */
-  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  background: radial-gradient(circle, #f9b340, #e9c16b, #fedf9e, #dbb04e);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   /* display: flex;
@@ -8777,6 +8777,15 @@ zoom-services
 .zoom-services__item:hover {
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   color: black;
+}
+
+.zoom-services-item-image {
+  transition: transform 1s ease-in-out; /* Smooth zoom animation */
+  transform: scale(1); /* Initial state */
+}
+
+.zoom-services-item-image.animate {
+  transform: scale(1.1); /* Zoom in */
 }
 
 .zoom-services__item-title {

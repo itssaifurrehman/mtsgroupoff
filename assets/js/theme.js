@@ -152,6 +152,21 @@
     }
   });
 
+  window.addEventListener('scroll', function() {
+    var images = document.querySelectorAll('.zoom-services-item-image'); // Select all images
+    
+    images.forEach(function(image) {
+      var rect = image.getBoundingClientRect();
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  
+      // Check if the image is in view
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        image.classList.add('animate');
+      } else {
+        image.classList.remove('animate'); // Optional: remove the class if not in view
+      }
+    });
+  });
 
   $('.animsition').animsition({
     inClass: 'fade-in',
