@@ -8721,16 +8721,16 @@ zoom-services
 
 .small-text {
   font-family: 'Teko', Helvetica, sans-serif;
-  font-size: 60px;
+  font-size: 37px;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 
 .large-text {
   padding-left: 0; 
-  font-size: 70px;
+  font-size: 40px;
   font-weight: bold;
   font-family: 'Teko', Helvetica, sans-serif;
   line-height: 1;
