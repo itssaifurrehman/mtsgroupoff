@@ -8773,7 +8773,7 @@ zoom-services
 
 .zoom-services__wrapper_bordered {
   margin-bottom: 0;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   /* border-bottom: 1px solid #e6e6e6; */
 }
 
