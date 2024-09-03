@@ -62,9 +62,55 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+
+	//////////////
+
+
+// 	var canvas = document.querySelector('.Background-canvas');
+
+// // Adjust texture alignment to focus on the top of the image (the sky)
+// var textureAlign = { x: 0, y: 0 }; // y: 0.1 focuses on the top part of the image
+
+// var textures = [{
+//   file: 'assets/img/DubaibackDrop.jpg',
+//   name: 'image',
+//   align: textureAlign,
+//   scale: { x: 1, y: 1 }
+// }, {
+//   file: 'assets/img/water-maps.jpg',
+//   name: 'maps',
+//   align: textureAlign,
+//   scale: { x: 0.2, y: 0.2 }
+// }];
+
+// var haze = new _haze2.default({
+//   canvas: canvas,
+//   shader: _hazeWater2.default,
+//   textures: textures,
+//   loop: 10000
+// });
+
+// let imageTextureBg = document.createElement('canvas');
+// haze.getTextureByName('image').then((texture) => {
+//   imageTexture = texture;
+//   imageTexture.addEventListener('resize', () => {
+//     let textureCanvas = texture.canvas;
+//     let ctx = imageTextureBg.getContext('2d');
+
+//     imageTextureBg.width = textureCanvas.width;
+//     imageTextureBg.height = textureCanvas.height;
+
+//     ctx.drawImage(textureCanvas, 0, 0);
+
+//     drawOverBG();
+//   });
+// });
+
+
+
 	// var canvas = document.querySelector('.Background-canvas');
 	
-	// var textureAlign = { x: 0.5, y: 0.9 };
+	// var textureAlign = { x: 0.1, y: 0.1 };
 	// var textures = [{
 	//   file: 'assets/img/DubaibackDrop.jpg',
 	//   name: 'image',
@@ -90,16 +136,16 @@
 	//   imageTexture.addEventListener('resize',()=>{
 	//     let textureCanvas=texture.canvas;
 	//     let ctx=imageTextureBg.getContext('2d');
-	//
+	
 	//     imageTextureBg.width=textureCanvas.width;
 	//     imageTextureBg.height=textureCanvas.height;
-	//
+	
 	//     ctx.drawImage(textureCanvas,0,0);
-	//
+	
 	//     drawOverBG();
 	//   })
 	// });
-	//
+	
 	// (function(){
 	//   let titleCanvas=document.querySelector('.Content-title');
 	//   let titleImage=new Image();

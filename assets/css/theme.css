@@ -803,6 +803,7 @@ cards-block
   line-height: 1.25;
   font-family: 'Teko', Helvetica, sans-serif;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .cards-block__text {
@@ -7188,20 +7189,27 @@ studio-filter
 */
 
 .studio-filter {
-  padding: 58px 0 68px;
+  /* padding: 58px 0 68px; */
 }
 
 .studio-filter__inner {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%;
+  height: 100vh; */
 }
 
 .studio-filter__title {
-  font-size: 48px;
+  font-size: 80px;
   line-height: 1.25;
   font-family: 'Teko', Helvetica, sans-serif;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 .studio-filter__filter {
@@ -7293,7 +7301,7 @@ studio-intro-slide
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 130px;
+  padding-top: 90px;
   /* padding-bottom: 90px; */
 }
 
@@ -7312,25 +7320,41 @@ studio-intro-slide
   display: flex;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-bottom: 52px;
+  /* margin-bottom: 52px; */
 }
 
 .studio-intro-slide__title {
   font-family: 'Teko', Helvetica, sans-serif;
-  font-size: 120px;
+  font-size: 130px;
   line-height: 0.875;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
+.studio-intro-slide__title1{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: 'Teko', Helvetica, sans-serif;
+  font-size: 100px;
+  line-height: 0.875;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-transform: uppercase;
+}
+
+
 .studio-intro-slide__text {
   font-size: 20px;
-  max-width: 630px;
-  margin-bottom: 84px;
-  line-height: 1.6;
+  margin-bottom: 70px;
+  line-height: 1.38;
   margin-left: auto;
   margin-right: auto;
   white-space: initial !important;
+  text-align: center;
 }
 
 .studio-intro-slide__link {
