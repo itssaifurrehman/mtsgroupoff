@@ -7278,11 +7278,12 @@ studio-intro-slide
   display: flex;
   min-height: 100vh;
   background-size: cover;
-  background-position: 50%;
+  /* background-position: 50%; */
   text-align: center;
   position: relative !important;
   z-index: 999 !important;
   color: #fff;
+
 }
 
 .studio-intro-slide__container {
@@ -7293,7 +7294,7 @@ studio-intro-slide
   -ms-flex-pack: center;
   justify-content: center;
   padding-top: 130px;
-  padding-bottom: 90px;
+  /* padding-bottom: 90px; */
 }
 
 .studio-intro-slide__inner {

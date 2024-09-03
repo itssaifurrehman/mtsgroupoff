@@ -62,27 +62,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var canvas = document.querySelector('.Background-canvas');
+	// var canvas = document.querySelector('.Background-canvas');
 	
-	var textureAlign = { x: 0.5, y: 0.9 };
-	var textures = [{
-	  file: 'assets/img/distortion.jpg',
-	  name: 'image',
-	  align: textureAlign,
-	  scale: { x: 1, y: 1 }
-	}, {
-	  file: 'assets/img/water-maps.jpg',
-	  name: 'maps',
-	  align: textureAlign,
-	  scale: { x: 0.2, y: 0.2 }
-	}];
+	// var textureAlign = { x: 0.5, y: 0.9 };
+	// var textures = [{
+	//   file: 'assets/img/DubaibackDrop.jpg',
+	//   name: 'image',
+	//   align: textureAlign,
+	//   scale: { x: 1, y: 1 }
+	// }, {
+	//   file: 'assets/img/water-maps.jpg',
+	//   name: 'maps',
+	//   align: textureAlign,
+	//   scale: { x: 0.2, y: 0.2 }
+	// }];
 	
-	var haze = new _haze2.default({
-	  canvas: canvas,
-	  shader: _hazeWater2.default,
-	  textures: textures,
-	  loop: 10000
-	});
+	// var haze = new _haze2.default({
+	//   canvas: canvas,
+	//   shader: _hazeWater2.default,
+	//   textures: textures,
+	//   loop: 10000
+	// });
 	
 	// let imageTextureBg=document.createElement('canvas');
 	// haze.getTextureByName('image').then((texture)=>{
