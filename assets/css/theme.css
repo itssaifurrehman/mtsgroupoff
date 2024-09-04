@@ -5668,6 +5668,8 @@ parallax-image
 .parallax-image {
   overflow: hidden;
   height: 500px;
+  margin-top: 5px;
+
 }
 
 .parallax-image__image {
