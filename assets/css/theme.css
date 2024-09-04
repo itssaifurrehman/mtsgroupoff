@@ -790,7 +790,7 @@ cards-block
 */
 
 .cards-block {
-  padding-top: 140px;
+  /* padding-top: 140px; */
   padding-bottom: 30px;
 }
 
@@ -7282,17 +7282,44 @@ studio-filter
 studio-intro-slide
 */
 
-.studio-intro-slide {
+/* .studio-intro-slide {
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
   background-size: cover;
-  /* background-position: 50%; */
   text-align: center;
   position: relative !important;
   z-index: 999 !important;
   color: #fff;
 
+} */
+
+.studio-intro-slide {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 99vh;
+  background-size: cover;
+  text-align: center;
+  position: relative !important;
+  z-index: 999 !important;
+  color: #fff;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the section */
 }
 
 .studio-intro-slide__container {
@@ -7313,7 +7340,7 @@ studio-intro-slide
 
 .studio-intro-slide__subtitle {
   font-size: 24px;
-  margin-bottom: 17px;
+  /* margin-bottom: 17px; */
 }
 
 .studio-intro-slide__title-wrapper {
@@ -7421,13 +7448,13 @@ studio-intro-slide
   height: 2px;
 }
 
-.Background {
+/* .Background {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-}
+} */
 
 .Background:before {
   content: '';
@@ -7436,7 +7463,7 @@ studio-intro-slide
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.2);
+  /* background: rgba(0,0,0,0.2); */
 }
 
 .Background:after {
