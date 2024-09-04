@@ -3631,6 +3631,9 @@ header
 .containerDemo2{
   padding-left: 10%;
 }
+.containerDemo3{
+  padding-top:5%;
+}
 
 .header_fixed .header__container {
   transform: translateY(0%);
@@ -7379,13 +7382,14 @@ studio-intro-slide
 
 
 .studio-intro-slide__text {
-  font-size: 20px;
+  font-size: 21px;
   margin-bottom: 70px;
-  line-height: 1.38;
+  line-height: 1.2;
   margin-left: auto;
   margin-right: auto;
   white-space: initial !important;
   text-align: center;
+  font-weight: 500;
 }
 
 .studio-intro-slide__link {
