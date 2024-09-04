@@ -7210,6 +7210,7 @@ studio-filter
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .studio-filter__filter {
@@ -7344,6 +7345,9 @@ studio-intro-slide
   -ms-flex-positive: 1;
   flex-grow: 1;
   text-transform: uppercase;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
