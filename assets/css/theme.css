@@ -293,6 +293,18 @@ table {
 custom bootstrap styles
 */
 
+.ytVideo {
+  display: flex;
+  justify-content: center;  /* Horizontally center the video */
+  align-items: center;      /* Vertically center the video */
+  /* height: 100vh;          */
+}
+/* 
+.ytVideo iframe {
+  max-width: 100%;        
+  height: auto;             
+} */
+
 a:hover {
   color: currentColor;
   text-decoration: none;
@@ -330,6 +342,7 @@ main {
   z-index: 2;
   background: #fff;
 }
+
 
 ::-webkit-scrollbar {
   width: 8px;
