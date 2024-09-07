@@ -3647,6 +3647,11 @@ header
 .containerDemo3{
   padding-top:5%;
 }
+.containerDemo4{
+  padding-top:1px !important;
+  padding-left: 4%;
+  margin-right: auto;
+}
 
 .header_fixed .header__container {
   transform: translateY(0%);
@@ -7025,7 +7030,7 @@ single-post
   font-family: 'Teko', Helvetica, sans-serif;
   font-size: 60px;
   line-height: 1;
-  margin-bottom: 76px;
+  margin-bottom: 15px;
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
