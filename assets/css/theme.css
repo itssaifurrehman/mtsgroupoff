@@ -7026,6 +7026,9 @@ single-post
   font-size: 60px;
   line-height: 1;
   margin-bottom: 76px;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .single-post__intro {
