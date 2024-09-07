@@ -7033,13 +7033,12 @@ single-post
 
 .single-post__intro {
   font-size: 24px;
-  /* line-height: 1.666666666666667; */
   font-weight: 100;
   margin-bottom: 74px;
-   text-align: justify;
-    word-spacing: -1px; /* Reduces word spacing further */
-    letter-spacing: -0.5px; /* Slightly tightens the letter spacing */
-    line-height: 1.4; /* Adjusts line spacing for a more compact look */
+  text-align: justify;
+  word-spacing: -1px;
+  letter-spacing: -0.5px;
+  line-height: 1.4;
 
 }
 
