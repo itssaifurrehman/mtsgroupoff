@@ -7033,9 +7033,15 @@ single-post
 
 .single-post__intro {
   font-size: 24px;
-  line-height: 1.666666666666667;
+  /* line-height: 1.666666666666667; */
   font-weight: 100;
   margin-bottom: 74px;
+
+  text-align: justify;
+    word-spacing: 0.5px; /* Minimizes extra space between words */
+    letter-spacing: normal; /* Keeps letter spacing natural */
+    line-height: 1.5; /* Ensures consistent line spacing */
+
 }
 
 .single-post__intro strong {
