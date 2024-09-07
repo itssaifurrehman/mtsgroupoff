@@ -7036,11 +7036,10 @@ single-post
   /* line-height: 1.666666666666667; */
   font-weight: 100;
   margin-bottom: 74px;
-
-  text-align: justify;
-    word-spacing: 0.5px; /* Minimizes extra space between words */
-    letter-spacing: normal; /* Keeps letter spacing natural */
-    line-height: 1.5; /* Ensures consistent line spacing */
+   text-align: justify;
+    word-spacing: -1px; /* Reduces word spacing further */
+    letter-spacing: -0.5px; /* Slightly tightens the letter spacing */
+    line-height: 1.4; /* Adjusts line spacing for a more compact look */
 
 }
 
