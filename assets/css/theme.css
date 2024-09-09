@@ -3606,7 +3606,7 @@ header
   /* top: 30px; */
   z-index: 3;
   position: fixed;
-  /* top: 10px; */
+  top: 0px;
   /* background: #242323; */
   color: white;
 }
@@ -5672,7 +5672,7 @@ parallax-image
 .parallax-image {
   overflow: hidden;
   height: 500px;
-  margin-top: 5px;
+  margin-top: -5px;
 
 }
 
@@ -6975,12 +6975,12 @@ single-post
 */
 
 .single-post {
-  padding-top: 120px;
+  padding-top: 100px;
   overflow: hidden;
 }
 
 .single-post__head {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .single-post__image {
