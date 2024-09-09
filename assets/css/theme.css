@@ -7047,24 +7047,24 @@ single-post
   line-height: 1.5;
 }
 .text-lines {
-  text-align: center;
+  text-align: right;
 }
 
 .line {
-  margin: 0;
+  /* margin: 0; */
   line-height: 2;
 }
 
 .line1 {
-  font-size: 22px;
+  font-size: 15px;
 }
 
 .line2 {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .line3 {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .line4 {
