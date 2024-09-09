@@ -7411,7 +7411,7 @@ studio-intro-slide
 
 .studio-intro-slide__inner {
   position: relative;
-  left: auto !important;
+  left: 5% !important;
 }
 
   .studio-intro-slide__subtitle {
