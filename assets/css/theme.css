@@ -6981,7 +6981,7 @@ single-post
 }
 
 .single-post__head {
-  margin-bottom: 100px;
+  margin-bottom: 35px;
 }
 
 .single-post__image {
@@ -7005,7 +7005,7 @@ single-post
 .single-post__header {
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 28px;
+  margin-bottom: 2px;
 }
 
 .single-post__date {
@@ -7028,19 +7028,21 @@ single-post
 
 .single-post__title {
   font-family: 'Teko', Helvetica, sans-serif;
-  font-size: 60px;
+  font-size: 75px;
   line-height: 1;
   margin-bottom: 15px;
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 .single-post__intro {
   font-size: 24px;
   font-weight: 100;
   margin-bottom: 74px;
-  text-align: justify;
+  text-align: center;
   word-spacing: -1px;
   letter-spacing: -0.5px;
   line-height: 1.5;
