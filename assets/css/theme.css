@@ -3843,8 +3843,7 @@ heading-default
 */
 
 .heading-default {
-  padding-top: 220px;
-  margin-bottom: 98px;
+  padding-top: 10%
 }
 
 .heading-default_context_listing {
