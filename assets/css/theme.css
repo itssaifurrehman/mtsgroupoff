@@ -513,7 +513,7 @@ article-listing-item
 }
 
 .article-listing-item:hover .article-listing-item__date {
-  color: #fff;
+  color: #000;
 }
 
 .article-listing-item__date:after {
@@ -534,21 +534,28 @@ article-listing-item
   line-height: 1;
   margin-bottom: 32px;
 }
+.article-listing-item:hover{
+  color: #000;
+}
 
 .article-listing-item__item-inner:hover .article-listing-item__title {
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+color: black;
 }
 
 .article-listing-item__text {
+  text-align: left;
+  /* font-family: 'Teko', Helvetica, sans-serif; */
   min-height: 255px;
   color: #666;
   transition: 0.3s;
 }
 
 .article-listing-item:hover .article-listing-item__text {
-  color: #fff;
+  color: black;
+  
 }
 
 .article-listing-item__continue {
@@ -790,6 +797,7 @@ back-link
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+color: #000;
 }
 
 .back-link__icon {
