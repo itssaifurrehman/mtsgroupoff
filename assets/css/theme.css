@@ -6988,7 +6988,7 @@ single-post
 }
 
 .single-post__head {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .single-post__image {
@@ -7368,7 +7368,7 @@ studio-intro-slide
 .studio-intro-slide {
   display: -ms-flexbox;
   display: flex;
-  min-height: 99vh;
+  min-height: 94vh;
   background-size: cover;
   text-align: center;
   position: relative !important;
