@@ -5680,7 +5680,7 @@ parallax-image
 .parallax-image {
   overflow: hidden;
   height: 500px;
-  margin-top: -4%;
+  /* margin-top: -4%; */
 
 }
 
@@ -7375,6 +7375,7 @@ studio-intro-slide
   z-index: 999 !important;
   color: #fff;
   overflow: hidden; /* Prevents scrolling */
+  top:-1%;
 }
 
 .studio-intro-slideConstruction {
