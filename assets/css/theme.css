@@ -7375,7 +7375,7 @@ studio-intro-slide
   z-index: 999 !important;
   color: #fff;
   overflow: hidden; /* Prevents scrolling */
-  top:-1%;
+  top:-2%;
 }
 
 .studio-intro-slideConstruction {
@@ -7393,7 +7393,7 @@ studio-intro-slide
 
 .Background {
   position: absolute;
-  top: 0;
+  top: -4%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -7454,7 +7454,7 @@ studio-intro-slide
   line-height: 0.875;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: left;
 }
 
