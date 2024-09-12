@@ -4702,7 +4702,7 @@ masonry-item
   line-height: 1.066666666666667;
   display: block;
   transition: color 0.3s;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .masonry-item:hover .masonry-item__title {
@@ -6860,11 +6860,27 @@ service-detail
   font-weight: 500;
   font-family: 'Teko', Helvetica, sans-serif;
 }
+.service-detail__intro2 {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 90px;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Teko', Helvetica, sans-serif;
+  margin-top: 5%;
+}
 .service-detail__underText {
   font-size: 50px;
   text-align: center;
   font-weight: 500;
   font-family: 'Teko', Helvetica, sans-serif;
+}
+
+.service-detail__underText1 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 3%;
 }
 
 .service-detail__text {
@@ -8714,7 +8730,7 @@ zoom-image-head
   font-weight: 600;
   line-height: 0.909090909090909;
   margin-bottom: 1vh;
-  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  background: radial-gradient(ellipse at center, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -8724,7 +8740,7 @@ zoom-image-head
   font-weight: bold;
   margin-top: -70px;
   font-family: 'Teko', Helvetica, sans-serif;
-  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  background: radial-gradient(ellipse at center, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
