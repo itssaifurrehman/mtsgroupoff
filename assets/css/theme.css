@@ -6807,6 +6807,7 @@ service-detail
 
 .service-detail__head {
   margin-bottom: 100px;
+  margin-top: 5px;
 }
 
 .service-detail__title {
