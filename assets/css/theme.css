@@ -7456,7 +7456,7 @@ studio-intro-slide
   display: flex;
   min-height: 99vh;
   background-size: cover;
-  text-align: center;
+  text-align: left;
   position: relative !important;
   z-index: 999 !important;
   color: #fff;
