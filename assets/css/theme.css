@@ -4683,6 +4683,14 @@ masonry-item
   display: block;
   transition: color 0.3s;
 }
+.masonry-item__title1 {
+  font-family: 'Teko', Helvetica, sans-serif;
+  font-size: 45px;
+  line-height: 1.066666666666667;
+  display: block;
+  transition: color 0.3s;
+  margin-bottom: 15px;
+}
 
 .masonry-item:hover .masonry-item__title {
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
@@ -6803,6 +6811,7 @@ service-detail
 .service-detail {
   padding-top: 120px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .service-detail__head {
@@ -6821,13 +6830,25 @@ service-detail
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 90px;
+  font-size: 130px;
   line-height: 1.6;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   text-align: center;
   font-weight: 500;
   font-family: 'Teko', Helvetica, sans-serif;
-
+  z-index: 2;
+}
+.service-detail__intro1 {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 90px;
+  line-height: 1.6;
+  /* margin-bottom: 30px; */
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Teko', Helvetica, sans-serif;
+  z-index: 2;
 }
 
 .service-detail__text {
@@ -6860,7 +6881,7 @@ service-works
 
 .service-works {
   background: #f3f5f6;
-  padding-top: 116px;
+  /* padding-top: 116px; */
   padding-bottom: 80px;
   border-bottom: 1px solid #ebebeb;
 }
@@ -7413,6 +7434,21 @@ studio-intro-slide
   padding-left: 5%;
 }
 
+
+.studio-intro-slideConstructionv2 {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 99vh;
+  background-size: cover;
+  text-align: center;
+  position: relative !important;
+  z-index: 999 !important;
+  color: #fff;
+  overflow: hidden; /* Prevents scrolling */
+  padding-left: 5%;
+}
+
+
 .Background {
   position: absolute;
   top: -5%;
@@ -7463,6 +7499,11 @@ studio-intro-slide
     padding-left: 15%;
   }
 
+  .studio-intro-slide__innerv2 {
+    position: relative;
+    /* left: 5% !important; */
+  }
+
 .studio-intro-slide__title {
   font-family: 'Teko', Helvetica, sans-serif;
   font-size: 130px;
@@ -7478,6 +7519,17 @@ studio-intro-slide
   flex-grow: 1;
   margin-top: 5%;
   text-align: left;
+}
+
+.studio-intro-slide__titlev2 {
+  font-family: 'Teko', Helvetica, sans-serif;
+  font-size: 130px;
+  line-height: 0.875;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .studio-intro-slide__title1{
