@@ -3649,6 +3649,11 @@ header
   padding-top: 14%;
   /* margin-left: auto; */
 }
+.containerAboutUs{
+  padding-top: 0;
+  padding-right: 5%;
+  padding-left: 5%;
+}
 .containerDemo2{
   padding-left: 10%;
 }
@@ -6812,9 +6817,16 @@ service-detail
 }
 
 .service-detail__intro {
-  font-size: 20px;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 90px;
   line-height: 1.6;
-  margin-bottom: 92px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Teko', Helvetica, sans-serif;
+
 }
 
 .service-detail__text {
@@ -6822,6 +6834,15 @@ service-detail
   line-height: 1.75;
   color: #666;
   margin-bottom: 104px;
+  text-align: justify;
+}
+
+.service-detail__text1 {
+  font-size: 20px;
+  line-height: 1.75;
+  color: #666;
+  margin-bottom: 104px;
+  text-align: justify;
 }
 
 .service-detail__subtitle {
