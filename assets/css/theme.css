@@ -4667,10 +4667,13 @@ masonry-item
   width: 100%;
   display: block;
   transform: scale(1);
-  transition: 0.5s;
+  transition: transform 1s ease-in-out; /* Smooth zoom animation */
   opacity: 1;
 }
 
+.masonry-item__image.animate {
+  transform: scale(1.1); /* Zoom in */
+}
 .masonry-item__image-wrapper:hover .masonry-item__image {
   transform: scale(1.04);
   opacity: 0.6;
@@ -7559,7 +7562,7 @@ studio-intro-slide
   margin-right: auto;
   white-space: initial !important;
   text-align: center;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .studio-intro-slide__link {
