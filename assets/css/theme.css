@@ -6879,7 +6879,7 @@ service-detail
 
 .service-detail__underText1 {
   font-size: 18px;
-  text-align: center;
+  text-align: justify;
   margin-top: 3%;
 }
 
