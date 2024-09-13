@@ -4785,11 +4785,13 @@ masonry-item
 
 .masonry-item__title1 {
   font-family: 'Teko', Helvetica, sans-serif;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 1.066666666666667;
   display: block;
   transition: color 0.3s;
   margin-bottom: 10px;
+  max-width: 30%;
+  text-align: center;
 }
 
 /* .masonry-item:hover {
@@ -7038,12 +7040,20 @@ service-detail
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 36px;
-  /* line-height: 0.1; */
   font-family: 'Teko', Helvetica, sans-serif;
   text-transform: uppercase;
-  /* margin-bottom: 0.6em; */
+  text-align: center;
+  max-width: 30%;
+}
+
+.service-detail__subtitlevv1 {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-family: 'Teko', Helvetica, sans-serif;
+  text-transform: uppercase;
   text-align: left;
-  /* margin-top: 5%; */
 }
 
 .checkDisplayCenter {
