@@ -7004,7 +7004,7 @@ service-detail
   text-transform: uppercase;
   /* margin-bottom: 0.6em; */
   text-align: left;
-  margin-top: 5%;
+  /* margin-top: 5%; */
 }
 .checkDisplayCenter{
   display: ruby;
