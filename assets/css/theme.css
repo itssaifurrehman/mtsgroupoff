@@ -4711,7 +4711,7 @@ masonry-item
 
 .containerBackground:hover{
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e); /* Golden gradient background */
-
+color:#000
 }
 
 
