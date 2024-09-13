@@ -4759,7 +4759,7 @@ masonry-item
   width: 100%;
   display: block;
   transform: scale(0.8);
-  transition: transform 1s ease-in-out;
+  transition: transform 1.5s ease-in-out;
   /* Smooth zoom animation */
   opacity: 1;
   padding: 10px;
@@ -4789,7 +4789,7 @@ masonry-item
   line-height: 0.3;
   display: block;
   transition: color 0.3s;
-  /* margin-bottom: 10px; */
+  margin-bottom: 10px;
   max-width: 30%;
   text-align: center;
 }
