@@ -3658,7 +3658,64 @@ header
   padding-left: 10%;
 }
 .containerDemo3{
-  padding-top:5%;
+  padding-top:5% !important;
+}
+.bkbor{
+  border-bottom: 1px solid #ebebeb;
+
+}
+
+/* .textMod{
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+  font-size: 40px;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 500;
+text-transform: uppercase;
+} */
+
+.text-container1 {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Ensure container takes full width */
+  position: relative; /* Establishes a relative positioning context */
+  font-size: 40px;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 500;
+text-transform: uppercase;
+}
+
+.textMod {
+  font-family: 'Teko', Helvetica, sans-serif;
+  font-size: 40px;
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 500;
+text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.ceo-text {
+  flex-shrink: 0; /* Prevent "CEO" from shrinking */
+  /* You can add additional styles here if needed */
+}
+
+.textModv1{
+  font-family: 'Teko', Helvetica, sans-serif;
+  position: relative; /* Keep it in flow for relative positioning */
+  margin-left: 8%; /* Adjust this value to move "CEO" slightly to the right */
+}
+
+.containerDemo21{
+  padding-top:1% !important;
 }
 .containerDemo4{
   padding-top:1px !important;
@@ -4684,7 +4741,7 @@ masonry-item
   transform: scale(0.8);
   transition: transform 1s ease-in-out; /* Smooth zoom animation */
   opacity: 1;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .masonry-item__image.animate {
@@ -6850,7 +6907,7 @@ service-detail
 
 
 .service-detail__intro {
-  font-size: 130px;
+  font-size: 70px;
   line-height: 1.6;
   text-align: center;
   font-weight: 500;
@@ -6938,11 +6995,51 @@ service-detail
 }
 
 .service-detail__subtitle {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 36px;
-  line-height: 1;
+  /* line-height: 0.1; */
   font-family: 'Teko', Helvetica, sans-serif;
   text-transform: uppercase;
-  margin-bottom: 0.6em;
+  /* margin-bottom: 0.6em; */
+  text-align: left;
+  margin-top: 5%;
+}
+.checkDisplayCenter{
+  display: ruby;
+}
+
+.col-sm-4{
+  max-width: 25% !important;
+}
+
+
+.service-detail__subtitlev1 {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-family: 'Teko', Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-detail__subtitlev2 {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-family: 'Teko', Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+.testColor:hover{
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  color: #000;
+  padding-top: 15px;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 /*
@@ -9347,7 +9444,14 @@ zoom-slider
   right: 60px;
 }
 .whatsapp-icon{
-  float: right;
+  position: fixed; /* Fixes the position relative to the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
+  z-index: 9999; /* Ensures it appears above other elements */
+  display: flex; /* Center the image within the anchor */
+  align-items: center;
+  justify-content: center;
+  /* float: right; */
 }
 
 @media only screen and (max-height: 600px) {
