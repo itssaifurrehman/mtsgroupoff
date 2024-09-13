@@ -4665,6 +4665,11 @@ masonry-item
 
 .service-works__item {
   text-align: center; /* This will center the image horizontally */
+  padding-top: 10px;
+}
+.service-works__item:hover {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  color: #000;
 }
 
 .masonry-item__image-wrapper {
@@ -4687,7 +4692,7 @@ masonry-item
 }
 .masonry-item__image-wrapper:hover .masonry-item__image {
   transform: scale(1);
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .masonry-item__title {
