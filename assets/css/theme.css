@@ -7721,6 +7721,12 @@ studio-intro-slide
   left: 5% !important;
 }
 
+.studio-intro-slide__innerDesign {
+  position: relative;
+  left: 5% !important;
+  top:15%;
+}
+
 .studio-intro-slide__subtitle {
   font-size: 24px;
   /* margin-bottom: 17px; */
