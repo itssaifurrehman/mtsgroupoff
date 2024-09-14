@@ -7073,6 +7073,7 @@ service-detail
   font-family: 'Teko', Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: left;
+  margin-top: 2%;
 }
 
 .checkDisplayCenter {
