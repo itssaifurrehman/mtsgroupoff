@@ -149,8 +149,8 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: white !important;
+  -webkit-focus-ring-color: white !important;
   cursor: default;
 }
 
@@ -277,11 +277,11 @@ textarea {
 }
 
 [placeholder]:focus:-ms-input-placeholder {
-  color: transparent;
+  color: white !important;
 }
 
 [placeholder]:focus::placeholder {
-  color: transparent;
+  color: white !important;
 }
 
 table {
@@ -320,6 +320,7 @@ ul {
 
 button:focus {
   outline: none;
+  color: white !important;
 }
 
 /*
@@ -358,12 +359,12 @@ main {
   background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
 }
 
-::selection {
+/* ::selection {
   background-background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #fff;
-}
+} */
 
 .no-mobile [data-motion-svg] {
   opacity: 0;
@@ -1325,6 +1326,7 @@ contact-block
   border: 0;
   border-bottom: 1px solid #ccc;
   background: transparent;
+  color: white !important;
 }
 
 .contact-block__input-text::-webkit-input-placeholder,
@@ -1332,6 +1334,9 @@ contact-block
   color: #999 !important;
 }
 
+input {
+  color:white !important;
+}
 .contact-block__input-text:-moz-placeholder,
 .contact-block__input-textarea:-moz-placeholder {
   color: #999 !important;
@@ -1354,7 +1359,8 @@ contact-block
 
 .contact-block__input-text:focus,
 .contact-block__input-textarea:focus {
-  border-color: #000;
+  border-color: #999 !important;
+  color: white !important;
 }
 
 .contact-block__input-text {
