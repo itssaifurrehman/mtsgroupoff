@@ -4770,9 +4770,9 @@ masonry-item
   font-size: 17px;
   line-height: 1;
 }
-.bottom-center-text p {
+/* .bottom-center-text p {
   font-size: 17px;
-}
+} */
 
 .masonry-item__image {
   width: 100%;
