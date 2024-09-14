@@ -139,6 +139,30 @@
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  // const inputField = document.getElementById('myInput');
+  // inputField.addEventListener('input', function() {
+  //   inputField.classList.add('typing');
+  // });
+  
+  // inputField.addEventListener('blur', function() { // When the user leaves the input field
+  //   inputField.classList.remove('typing');
+  // });
+
+
+  // Select all input fields with the class 'contact-block__input-text'
+const inputFields = document.querySelectorAll('.contact-block__input-text');
+
+// Loop through each input field and add event listeners
+inputFields.forEach(function(inputField) {
+  inputField.addEventListener('input', function() {
+    inputField.classList.add('typing');    
+  });
+
+  inputField.addEventListener('blur', function() {
+    inputField.classList.remove('typing');
+  });
+});
+
   window.addEventListener('scroll', function() {
     var card = document.querySelector('.zoom-counter__card');
     var rect = card.getBoundingClientRect();

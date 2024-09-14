@@ -1368,6 +1368,10 @@ input {
   margin-bottom: 23px;
 }
 
+.typing {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+}
+
 .contact-block__input-textarea {
   padding: 12px 0;
   min-height: 160px;
@@ -9227,6 +9231,7 @@ zoom-services
   background: radial-gradient(circle, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 1%;
   /* display: flex;
   flex-direction: column; 
   align-items: flex-start;  */
