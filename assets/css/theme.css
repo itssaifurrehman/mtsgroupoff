@@ -1314,9 +1314,26 @@ contact-block
   margin-left: 7px;
 }
 
+.send-now-btn {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  color: black;              /* White text */
+  border: none;              /* Remove default border */
+  padding: 12px 24px;        /* Button padding */
+  font-size: 16px;           /* Button text size */
+  cursor: pointer;           /* Pointer on hover */
+  border-radius: 20px;       /* Rounded borders */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  font-weight: 500;
+  margin-top: 2%;
+}
+
+.send-now-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
 .contact-block__form {
   display: block;
-  margin-top: 72px;
+  margin-top: 10px;
 }
 
 .contact-block__input-text,
@@ -7342,6 +7359,15 @@ single-post
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+
+}
+
+.fixed-bottom-center {
+  margin-top: 10px;
+  position: absolute;
+  /* bottom: 20px; */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .single-post__intro {
