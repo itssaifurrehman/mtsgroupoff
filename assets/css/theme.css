@@ -4801,6 +4801,9 @@ masonry-item
   display: block;
   transition: color 0.3s;
 }
+.textCenter{
+  text-align: center;
+}
 
 .masonry-item__title1 {
   font-family: 'Teko', Helvetica, sans-serif;
