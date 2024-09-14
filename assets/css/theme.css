@@ -7081,7 +7081,11 @@ service-detail
 }
 
 .col-sm-4 {
-  max-width: 25% !important;
+  max-width: 33.34% !important;
+}
+
+.service-works__grid{
+  margin-top: 2%;
 }
 
 
