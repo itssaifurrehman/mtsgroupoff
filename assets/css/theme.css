@@ -7769,6 +7769,12 @@ studio-intro-slide
   left: 5% !important;
 }
 
+
+.studio-intro-slide__innerConst {
+  position: relative;
+  left: 0% !important;
+}
+
 .studio-intro-slide__innerDesign {
   position: relative;
   left: 5% !important;
