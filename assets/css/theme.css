@@ -7717,7 +7717,7 @@ studio-intro-slide
   color: #fff;
   overflow: hidden;
   /* Prevents scrolling */
-  padding-left: 5%;
+  /* padding-left: 5%; */
 }
 
 
@@ -7766,14 +7766,14 @@ studio-intro-slide
 
 .studio-intro-slide__inner {
   position: relative;
-  left: 5% !important;
-  padding-top: 5%;
+  left: 0;
+  padding-top: 0;
 }
 
 
 .studio-intro-slide__innerConst {
-  /* position: relative;
-  left: 0% !important; */
+  position: relative;
+  /* left: 0% !important; */
 }
 
 .studio-intro-slide__innerDesign {
