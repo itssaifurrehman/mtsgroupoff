@@ -491,7 +491,7 @@ article-listing-item
 }
 
 .article-listing-item__cover-image:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .article-listing-item__content {
@@ -7311,7 +7311,14 @@ single-post
   width: 100%;
   display: block;
   margin-bottom: 30px;
+  transform: scale(1);
+
 }
+
+.single-post__image:hover {
+  transform: scale(1.08);
+}
+
 
 .single-post__category {
   font-weight: 500;
@@ -7432,7 +7439,10 @@ single-post
 
 .single-post__images {
   margin-bottom: 62px;
+  /* transform: scale(1); */
+
 }
+
 
 .single-post__subtitle {
   font-weight: 600;
@@ -9280,7 +9290,7 @@ zoom-services
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 
 .large-text {
@@ -9614,7 +9624,7 @@ zoom-slider
 
 .whatsapp-icon1 {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 4%;
   z-index: 9999;
 }
