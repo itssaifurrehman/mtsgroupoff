@@ -7780,6 +7780,7 @@ studio-intro-slide
   position: relative;
   left: 0;
   top: 0;
+
 }
 
 .studio-intro-slide__subtitle {
@@ -9614,7 +9615,7 @@ zoom-slider
 
 .whatsapp-icon1 {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   left: 4%;
   z-index: 9999;
 }
