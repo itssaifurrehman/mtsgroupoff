@@ -8971,9 +8971,9 @@ zoom-image-head
 
 .zoom-image-head__bg2 {
   position: absolute;
-  /* left: 18%; */
+  left: -30%;
   bottom: -8%;
-  width: 100%;
+  width: 140%;
   z-index: 2;
 }
 
@@ -8982,6 +8982,7 @@ zoom-image-head
   width: 100%;
   z-index: 3;
   /* padding-top: 100px; */
+  top: -40px;
 }
 
 .zoom-image-head__subtitle {

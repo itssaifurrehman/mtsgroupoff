@@ -121,11 +121,11 @@
   }
 
   .zoom-image-head__body {
-    top: 0;
+    top: -40px;
   }
 
   .whatsapp-icon1 {
-    bottom: 55px;
+    bottom: -30px;
   }
 
   .zoom-slider__header {
@@ -151,6 +151,11 @@
   .zoom-slider__control_next {
     right: 15px;
   }
+
+  .zoom-image-head__content {
+    top: -15px;
+  }
+
 }
 
 @media (min-width: 1200px) {
