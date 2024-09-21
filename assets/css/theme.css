@@ -7299,7 +7299,7 @@ single-post
 */
 
 .single-post {
-  padding-top: 25px;
+  padding-top: 0px;
   overflow: hidden;
 }
 
@@ -9266,7 +9266,7 @@ zoom-services
   background: radial-gradient(circle, #f9b340, #e9c16b, #fedf9e, #dbb04e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 1%;
+  margin-top: 2%;
   /* display: flex;
   flex-direction: column; 
   align-items: flex-start;  */
