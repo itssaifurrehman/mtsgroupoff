@@ -4786,7 +4786,7 @@ masonry-item
 
 .bottom-center-text {
   position: absolute;
-  bottom: 20%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -7779,7 +7779,8 @@ studio-intro-slide
 .studio-intro-slide__innerDesign {
   position: relative;
   left: 0;
-  top:10vh;
+  top: 0;
+
 }
 
 .studio-intro-slide__subtitle {
@@ -7855,7 +7856,7 @@ studio-intro-slide
 
 .studio-intro-slide__text {
   font-size: 21px;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
   line-height: 1.2;
   /* margin-left: auto;
   margin-right: auto; */
@@ -8936,7 +8937,7 @@ zoom-image-head
 }
 
 .no-mobile .zoom-image-head {
-  margin-bottom: 400px;
+  /* margin-bottom: 400px; */
 }
 
 .zoom-image-head__body {
@@ -8944,6 +8945,7 @@ zoom-image-head
   width: 100%;
   display: -ms-flexbox;
   display: flex;
+  top: -40px;
   -ms-flex-align: center;
   align-items: center;
 }
@@ -9612,7 +9614,7 @@ zoom-slider
 
 .whatsapp-icon1 {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 4%;
   z-index: 9999;
 }

@@ -117,7 +117,15 @@
   }
 
   .no-mobile .zoom-image-head {
-    margin-bottom: 300px;
+    /* margin-bottom: 300px; */
+  }
+
+  .zoom-image-head__body {
+    top: 0;
+  }
+
+  .whatsapp-icon1 {
+    bottom: 55px;
   }
 
   .zoom-slider__header {
