@@ -7790,7 +7790,6 @@ studio-intro-slide
   position: relative;
   left: 0;
   top: 0;
-
 }
 
 .studio-intro-slide__subtitle {
@@ -8981,18 +8980,19 @@ zoom-image-head
 }
 
 .zoom-image-head__bg2 {
-  position: absolute;
-  /* left: 18%; */
-  bottom: -8%;
-  width: 100%;
+  /* position: absolute;
+  left: -25%;
+  bottom: -8%;*/
+  width: 100%; 
   z-index: 2;
 }
 
 .zoom-image-head__content {
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 3;
   /* padding-top: 100px; */
+  top: -40px;
 }
 
 .zoom-image-head__subtitle {
@@ -9628,7 +9628,6 @@ zoom-slider
   left: 4%;
   z-index: 9999;
 }
-
 
 @media only screen and (max-height: 600px) {
   .full-screen-block__footer {
