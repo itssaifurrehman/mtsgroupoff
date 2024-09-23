@@ -181,8 +181,8 @@
 
 @media (min-width: 1200px) and (max-width: 1365px) {
   .zoom-image-head__bg2 {
-    margin-top: -5%;
-    height: 100%;
+    margin-top: -4%;
+    height: 120%;
   }
 
   .zoom-image-head__content {
