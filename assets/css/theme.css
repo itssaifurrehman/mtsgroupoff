@@ -4786,7 +4786,7 @@ masonry-item
 
 .bottom-center-text {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -7311,12 +7311,12 @@ single-post
   width: 100%;
   display: block;
   margin-bottom: 30px;
-  transform: scale(1);
-
+  transform: scale(0.8);
 }
 
 .single-post__image:hover {
-  transform: scale(1.08);
+  transform: scale(0.95);
+  transition: transform 1s ease-in;
 }
 
 
