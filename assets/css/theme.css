@@ -7439,8 +7439,6 @@ single-post
 
 .single-post__images {
   margin-bottom: 62px;
-  /* transform: scale(1); */
-
 }
 
 
@@ -9352,15 +9350,13 @@ zoom-services
 
 .zoom-services-item-image {
   transition: transform 1s ease-in-out;
-  /* Smooth zoom animation */
   transform: scale(1);
-  /* Initial state */
 }
 
 .zoom-services-item-image.animate {
   transform: scale(1.1);
-  /* Zoom in */
 }
+
 
 .zoom-services__item-title {
   font-size: 30px;

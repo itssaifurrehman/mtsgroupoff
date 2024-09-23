@@ -191,9 +191,6 @@ inputFields.forEach(function(inputField) {
       }
     });
   });
-
-
-  
   window.addEventListener('scroll', function() {
     var images = document.querySelectorAll('.masonry-item__image'); // Select all images
     
