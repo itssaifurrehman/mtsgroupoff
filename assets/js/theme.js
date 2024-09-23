@@ -192,21 +192,15 @@ inputFields.forEach(function(inputField) {
     });
   });
 
-  // window.addEventListener('scroll', function() {
-  //   var images = document.querySelectorAll('.single-post__image'); // Select all images
-    
-  //   images.forEach(function(image) {
-  //     var rect = image.getBoundingClientRect();
-  //     var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  
-  //     // Check if the image is in view
-  //     if (rect.top <= windowHeight && rect.bottom >= 0) {
-  //       image.classList.add('animate');
-  //     } else {
-  //       image.classList.remove('animate'); // Optional: remove the class if not in view
-  //     }
-  //   });
-  // });
+  $(document).ready(function () {
+    var path = window.location.pathname.split("/").pop();
+    $('.top-menu__menu-link').each(function () {
+      var href = $(this).attr('href');
+      if (path === href) {
+        $(this).addClass('top-menu__menu-link_active');
+      }
+    });
+  });
 
 
   window.addEventListener('scroll', function() {
