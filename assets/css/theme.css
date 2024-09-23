@@ -9620,7 +9620,7 @@ zoom-slider
 
 .whatsapp-icon1 {
   position: absolute;
-  bottom: 10px;
+  bottom: -4%;
   left: 4%;
   z-index: 9999;
 }
