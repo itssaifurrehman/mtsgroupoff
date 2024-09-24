@@ -7148,6 +7148,13 @@ service-detail
   -webkit-text-fill-color: transparent; */
 }
 
+.testColorConst:hover {
+  background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+  /* color: #000; */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
 /*
 service-works
 */
@@ -7315,7 +7322,7 @@ single-post
 }
 
 .single-post__image:hover {
-  transform: scale(0.95);
+  transform: scale(0.9);
   transition: transform 1s ease-in;
 }
 
