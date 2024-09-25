@@ -531,7 +531,8 @@
   }
 
   .header-fixed__bottom {
-    display: none;
+    /* display: none; */
+    font-size: 15px;
   }
 
   .header-full-page__bottom {
@@ -1454,7 +1455,7 @@
   }
 
   .header-fixed__bottom {
-    display: none;
+    /* display: none; */
   }
 
   .header-full-page__bottom {
@@ -1871,5 +1872,39 @@
   .containerDemo{
     padding-top: 0;
     padding-left: 5%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header-fixed {
+    bottom: -17vh !important;
+    margin-left: 4%;
+  }
+
+  .top-menu__menu-item:not(:last-child) {
+    margin-right: 10px !important;
+  }
+  .zoom-image-head__bg-inner{
+    top: 5% !important;
+  }
+  .whatsapp-icon{
+    bottom: 35px !important;
+    right: 30px !important;
+  }
+  .whatsapp-icon1{
+    bottom: 5px !important;
+  }
+  .zoom-counter__text p {
+    /* margin-bottom: 30px; */
+    text-align: justify;
+  }
+  .zoom-counter__text{
+    margin-bottom: 0 !important;
+  }
+  .zoom-counters__text{
+    padding-top: 5% !important;
+  }
+  .zoom-counters__value{
+    min-width: 0 !important;
   }
 }

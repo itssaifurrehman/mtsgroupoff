@@ -236,6 +236,22 @@ inputFields.forEach(function(inputField) {
     });
   });
 
+const header = document.querySelector('.header');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', function () {
+  const currentScrollPosition = window.pageYOffset;
+
+  // Hide header when scrolling down and show only when at the top
+  if (currentScrollPosition > 0 && currentScrollPosition > lastScrollPosition) {
+    header.style.display = 'none'; // Hide the header when scrolling down
+  } else if (currentScrollPosition === 0) {
+    header.style.display = 'block'; // Show the header only at the top
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});
+
   $('.animsition').animsition({
     inClass: 'fade-in',
     outClass: 'fade-out',
