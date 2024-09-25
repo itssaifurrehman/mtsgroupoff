@@ -1917,7 +1917,8 @@
     text-align: left !important;
     margin-left: 4%;
     margin-right: 4%;
-    font-size: 70px !important;
+    font-size: 35px;
+    padding-bottom: 10px;
   }
   .studio-intro-slide__textReal{
     font-size: 20px !important;
