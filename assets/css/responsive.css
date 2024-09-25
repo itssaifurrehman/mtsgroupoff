@@ -1895,8 +1895,10 @@
     bottom: 5px !important;
   }
   .zoom-counter__text p {
-    /* margin-bottom: 30px; */
     text-align: justify;
+    font-size: 15px;
+    margin-left: 1%;
+    margin-right: 2%;
   }
   .zoom-counter__text{
     margin-bottom: 0 !important;
@@ -1906,5 +1908,8 @@
   }
   .zoom-counters__value{
     min-width: 0 !important;
+  }
+  .containerDemo2 {
+    padding-left: 2vh !important;
   }
 }
