@@ -1912,4 +1912,16 @@
   .containerDemo2 {
     padding-left: 2vh !important;
   }
+
+  .studio-intro-slide__title1{
+    text-align: justify !important;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-size: 76px !important;
+  }
+  .studio-intro-slide__textReal{
+    font-size: 20px !important;
+    text-align: justify !important;
+  }
+
 }
