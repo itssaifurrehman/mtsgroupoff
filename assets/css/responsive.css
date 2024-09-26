@@ -1986,7 +1986,7 @@ display: none;
   }
   .mobileSetting{
     position: absolute;
-    bottom: -1vh;
+    bottom: -3vh;
     right: 0;
     z-index: 9999;
   }
