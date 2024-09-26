@@ -2026,4 +2026,8 @@ display: none;
   .col-sm-4{
     max-width: 100% !important;
   }
+  .studio-filter__title{
+    font-size: 55px;
+    font-weight: 600;
+  }
 }
