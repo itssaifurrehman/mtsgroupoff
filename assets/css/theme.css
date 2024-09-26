@@ -7776,7 +7776,6 @@ studio-intro-slide
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures the video covers the section */
 }
 
 .studio-intro-slide__container {
@@ -9008,6 +9007,9 @@ zoom-image-head
   background-position: 50%;
 
 }
+.isMobileScreen{
+  display: none;
+}
 
 .zoom-image-head__bg2 {
   /* position: absolute;
@@ -9016,6 +9018,9 @@ zoom-image-head
   width: 100%; 
   z-index: 2;
 }
+/* .zoom-image-head__bg2Mobile{
+  display: none;
+} */
 
 .zoom-image-head__content {
   position: absolute;
