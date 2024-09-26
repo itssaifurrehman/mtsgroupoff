@@ -2001,11 +2001,29 @@ display: none;
   .zoom-image-head__content{
     top: 30% !important;
   }
-
-  /* .zoom-image-head__bg{
-    display: none;
+  .zoom-image-head__subtitle {
+    margin-bottom: 0px !important;
   }
-  .zoom-image-head__bg2{
-    display: block;
-  } */
+  .zoom-image-head__text{
+    font-size: 15px;
+  }
+  .service-detail__subtitlevv1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+  }
+  .service-detail__underText1{
+    font-size: 16px;
+  text-align: justify;
+  margin-top: 0;
+  line-height: 1.4; /* Adjust as needed */
+  hyphens: auto;
+  }
+  .service-detail__subtitle{
+    font-size: 30px;
+    max-width: 100%;
+  }
+  .col-sm-4{
+    max-width: 100% !important;
+  }
 }
