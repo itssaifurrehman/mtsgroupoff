@@ -1883,9 +1883,12 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .top-menu{
+    font-size: 10px !important;
+  }
   .header-fixed {
-    bottom: -17vh !important;
-    margin-left: 4%;
+    bottom: -75px !important;
+    /* margin-left: 4%; */
   }
   /* .zoom-image-head__bg2{
 display: none;
