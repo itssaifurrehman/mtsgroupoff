@@ -1916,7 +1916,7 @@ display: none;
   }
 
   .whatsapp-icon1 {
-    bottom: 0 !important;
+    bottom: -1% !important;
   }
 
   .zoom-counter__title {
@@ -1986,7 +1986,7 @@ display: none;
   }
   .mobileSetting{
     position: absolute;
-    bottom: -3vh;
+    bottom: -2vh;
     right: 0;
     z-index: 9999;
   }
@@ -1997,6 +1997,9 @@ display: none;
     left: 0;
     top: 0;
     z-index: 1;
+  }
+  .zoom-image-head__content{
+    top: 30% !important;
   }
 
   /* .zoom-image-head__bg{
