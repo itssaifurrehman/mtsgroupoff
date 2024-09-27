@@ -415,6 +415,40 @@ window.addEventListener('scroll', function () {
     }
   })();
 
+  window.onload = function() {
+    if (window.innerWidth <= 768) {
+        const currentUrl = window.location.pathname;
+        let lines = [];
+        if (currentUrl.includes('/real-estate.html')) {
+            lines = [
+                'MTS Group where UAE and Pakistan’s real estate markets',
+                'converge. Explore our diverse portfolio of luxury real',
+                'estate and great investment opportunities with',
+                ' our tailored solutions and seamless service.'
+            ];
+        } else if (currentUrl.includes('/construction.html')) {
+            lines = [
+                'Combining the strength of 150+ experienced professionals',
+                'with advanced machinery, MTS GROUP excels in delivering',
+                'high quality results across the UAE and Pakistan. Experience',
+                'excellence through our unwavering commitment to timely',
+                'delivery and superior workmanship, backed by our',
+                'expertise and innovation.'
+            ];
+        }
+
+        if (lines.length > 0) {
+            var element = document.querySelector('.studio-intro-slide__text');
+            var newContent = '';
+            lines.forEach(function(line, index) {
+                var fontSize = 16-index-1;
+                newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
+            })
+            element.innerHTML = newContent;
+        }
+    }
+};
+
   // footer
   (function () {
     var bodyElement = document.querySelector('body');
