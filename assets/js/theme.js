@@ -932,7 +932,7 @@ window.addEventListener('scroll', function () {
     var counterLink = document.querySelector('.zoom-counter__read-more');
     var typedElement = document.querySelector('.zoom-counter__subtitle');
 
-    if (body && !detectMobile.isMobile) {
+    if (body || detectMobile.isMobile) {
       var checkPosition = function checkPosition() {
         var scroll = $(window).scrollTop();
         var height = bodyWrapper.offsetHeight;
