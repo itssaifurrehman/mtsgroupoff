@@ -7804,6 +7804,11 @@ studio-intro-slide
   left: 0;
   padding-top: 0;
 }
+.studio-intro-slide__innerReal {
+  position: relative;
+  left: 0;
+  padding-top: 0;
+}
 
 
 .studio-intro-slide__innerConst {
