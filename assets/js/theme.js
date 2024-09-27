@@ -436,30 +436,30 @@ window.addEventListener('scroll', function () {
                 'expertise and innovation.'
             ]; 
         }
-        else if (currentUrl.includes('/aboutUs.html')) {
-          lines = [
-              'MTS Group headquartered in Sialkot with offices in Islamabad and',
-              'Dubai is dedicated to setting new benchmarks in luxury real estate',
-              'and construction. Our mission is to deliver unparalleled quality,',
-              'innovation, and excellence in every project, creating iconic',
-              'spaces that enrich lives and exceed expectations. With',
-              'a commitment to superior craftsmanship sustainable',
-              'practices, and client satisfaction, we strive to redefine',
-              'the landscape of real  estate industry,leaving a ',
-              'legacy of distinction and enduring value',
-          ];
-          if (lines.length > 0) {
-            var element = document.querySelector('.timeToShow');
-            console.log("Element is: ",element)
-            var newContent = '';
-            var fontSize=14;
-            lines.forEach(function(line, index) {
-                fontSize = fontSize - 1;
-                newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
-            })
-            element.innerHTML = newContent;
-      }
-      }
+      //   else if (currentUrl.includes('/aboutUs.html')) {
+      //     lines = [
+      //         'MTS Group headquartered in Sialkot with offices in Islamabad and',
+      //         'Dubai is dedicated to setting new benchmarks in luxury real estate',
+      //         'and construction. Our mission is to deliver unparalleled quality,',
+      //         'innovation, and excellence in every project, creating iconic',
+      //         'spaces that enrich lives and exceed expectations. With',
+      //         'a commitment to superior craftsmanship sustainable',
+      //         'practices, and client satisfaction, we strive to redefine',
+      //         'the landscape of real  estate industry,leaving a ',
+      //         'legacy of distinction and enduring value',
+      //     ];
+      //     if (lines.length > 0) {
+      //       var element = document.querySelector('.timeToShow');
+      //       console.log("Element is: ",element)
+      //       var newContent = '';
+      //       var fontSize=14;
+      //       lines.forEach(function(line, index) {
+      //           fontSize = fontSize - 1;
+      //           newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
+      //       })
+      //       element.innerHTML = newContent;
+      // }
+      // }
       if (lines.length > 0) {
         var element = document.querySelector('.studio-intro-slide__text');
         var newContent = '';

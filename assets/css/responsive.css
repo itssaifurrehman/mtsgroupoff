@@ -2037,7 +2037,7 @@ display: none;
   padding-left: 5px;
   } */
   .containerDemo21{
-    /* padding-top: 15% !important; */
+    padding-top: 1px !important;
   }
   .single-post__title{
     font-size: 50px;
@@ -2108,13 +2108,16 @@ display: none;
   .timeToShow{
     display: block;
     position: absolute;
-    top: 60%;
+    top: 67%;
     color: white;
     width: 100%;
     line-height: 1.4;
-    text-align: center;
-   
+    text-align: justify;
     word-spacing: 0.05em;
+    padding-left: 15px;
+    padding-right: 15px;
+    hyphens: auto;
+    font-size: 12px;
     
   }
   .parallax-image__image{
