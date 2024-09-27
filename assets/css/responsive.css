@@ -2146,7 +2146,7 @@ display: none;
   .studio-intro-slideConstructionv2 {
     display: -ms-flexbox;
     display: flex;
-    min-height: 50vh;
+    min-height: 55vh;
     background-size: cover;
     text-align: left;
     position: relative !important;
@@ -2159,7 +2159,7 @@ display: none;
     margin-top: 15%;
   }
   .studio-intro-slide{
-    min-height: 45vh;
+    min-height: 50vh;
   }
   .studio-intro-slide__innerDesign{
     top: 15vh;
