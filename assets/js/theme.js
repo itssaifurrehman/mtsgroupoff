@@ -463,7 +463,7 @@ window.addEventListener('scroll', function () {
         var element = document.querySelector('.studio-intro-slide__text');
         var newContent = '';
         lines.forEach(function(line, index) {
-            var fontSize = 16-index-1;
+            var fontSize = 15-index-1;
             newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
         })
         element.innerHTML = newContent;

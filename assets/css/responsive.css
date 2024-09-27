@@ -2108,7 +2108,7 @@ display: none;
   .timeToShow{
     display: block;
     position: absolute;
-    top:60%;
+    top:50%;
     color: white;
     width: 100%;
     line-height: 1.4;
@@ -2137,7 +2137,7 @@ display: none;
   .studio-intro-slideConstructionv2 {
     display: -ms-flexbox;
     display: flex;
-    min-height: 50vh;
+    min-height: 99vh;
     background-size: cover;
     text-align: left;
     position: relative !important;
