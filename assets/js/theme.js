@@ -434,18 +434,40 @@ window.addEventListener('scroll', function () {
                 'excellence through our unwavering commitment to timely',
                 'delivery and superior workmanship, backed by our',
                 'expertise and innovation.'
-            ];
+            ]; 
         }
-
-        if (lines.length > 0) {
-            var element = document.querySelector('.studio-intro-slide__text');
-            var newContent = '';
-            lines.forEach(function(line, index) {
-                var fontSize = 16-index-1;
-                newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
-            })
-            element.innerHTML = newContent;
-        }
+      //   else if (currentUrl.includes('/aboutUs.html')) {
+      //     lines = [
+      //         'MTS Group headquartered in Sialkot with offices',
+      //         'in Islamabad and Dubai is dedicated to setting new',
+      //         'benchmarks in luxury real estate and construction. Our',
+      //         'Our mission is to deliver unparalleled quality, innovation,',
+      //         'and excellence in every project, creating iconic spaces that',
+      //         'enrich lives and exceed expectations. With a commitment to',
+      //         'superior craftsmanship, sustainable practices, and client',
+      //         'satisfaction, to redefine the landscape of real  estate industry,',
+      //         'leaving a we strive legacy of distinction and enduring value.',
+      //     ];
+      //     if (lines.length > 0) {
+      //       var element = document.querySelector('.timeToShow');
+      //       console.log("Element is: ",element)
+      //       var newContent = '';
+      //       lines.forEach(function(line, index) {
+      //           var fontSize = 19-index-1;
+      //           newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
+      //       })
+      //       element.innerHTML = newContent;
+      // }
+      // }
+      if (lines.length > 0) {
+        var element = document.querySelector('.studio-intro-slide__text');
+        var newContent = '';
+        lines.forEach(function(line, index) {
+            var fontSize = 16-index-1;
+            newContent += '<span style="display:block; font-size:' + fontSize + 'px;">' + line + '</span>';
+        })
+        element.innerHTML = newContent;
+    }
     }
 };
 
