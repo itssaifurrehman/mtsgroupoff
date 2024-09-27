@@ -2120,6 +2120,9 @@ display: none;
     font-size: 11px;
     
   }
+  .article-listing-item__title{ 
+    margin-bottom: 1px !important;
+  }
   .last-line{
     display: block;
     text-align: center;
