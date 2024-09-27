@@ -2050,10 +2050,7 @@ display: none;
     object-position: 36%;
   }
   .Background1 video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 26% !important;
+    display: none;
   }
   .Background1 img{
     width: 100%;
@@ -2061,8 +2058,15 @@ display: none;
     object-fit: cover;
     object-position: 26% !important;
   }
+  .showimg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 26% !important;
+  }
   .studio-intro-slide__innerReal {
-    margin-top: 100%;
+    margin-top: 10vh;
   }
   .studio-intro-slide__innerConst{
     margin-top: 50%;

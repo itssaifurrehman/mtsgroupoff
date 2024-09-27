@@ -7831,7 +7831,9 @@ studio-intro-slide
   left: 0;
   padding-top: 0;
 }
-
+.showimg{
+  display: none;
+}
 
 .studio-intro-slide__innerConst {
   position: relative;
