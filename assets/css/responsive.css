@@ -2040,8 +2040,8 @@ display: none;
     padding-top: 1px !important;
   }
   .single-post__title{
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 500;
     }
   .Background video{
     width: 100%;
@@ -2056,7 +2056,7 @@ display: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 26% !important;
+    object-position: 25% !important;
   }
   .showimg{
     display: block;
