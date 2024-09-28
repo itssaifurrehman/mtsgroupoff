@@ -1,6 +1,86 @@
 (function($) {
   'use strict';
 
+
+
+  // Function to check if the user is on a mobile device
+  function isMobile() {
+    return window.innerWidth <= 768;  // Adjust threshold as needed
+  }
+
+  // Function to dynamically load the video or image
+  function loadMedia() {
+    const mediaContainer = document.getElementById("mediaContainer");
+
+    // Clear previous content to avoid stacking
+    mediaContainer.innerHTML = ""; 
+
+    if (isMobile()) {
+
+      if(window.location.pathname=='/real-estate.html'){
+        const img = document.createElement("img");
+        img.src = "assets/videos/RealEstateVid.gif"; // Path to your GIF
+        img.alt = "Background Animation";
+        mediaContainer.appendChild(img);
+
+      }
+      if(window.location.pathname=='/construction.html'){
+        const img = document.createElement("img");
+        img.src = "assets/videos/constVid.gif"; // Path to your GIF
+        img.alt = "Background Animation";
+        mediaContainer.appendChild(img);
+
+      }
+      // Load image for mobile
+      
+    } else {
+      // Load video for desktop
+      const video = document.createElement("video");
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+
+      // Create source elements for video
+     
+      if(window.location.pathname=='/real-estate.html'){
+        const mp4Source = document.createElement("source");
+        const webmSource = document.createElement("source");
+        mp4Source.src = "assets/videos/bgHeaderv5.mp4"; // Path to your MP4
+        mp4Source.type = "video/mp4";
+        webmSource.src = "assets/videos/bgHeaderv5.webm"; // Path to your WebM
+        webmSource.type = "video/webm";
+        video.appendChild(mp4Source);
+      video.appendChild(webmSource);
+      mediaContainer.appendChild(video);
+
+      }
+      if(window.location.pathname=='/construction.html'){
+        const mp4Source = document.createElement("source");
+        mp4Source.src = "assets/videos/bgHeaderCrane.mp4"; // Path to your MP4
+        mp4Source.type = "video/mp4";
+        video.appendChild(mp4Source);
+        mediaContainer.appendChild(video);
+
+      }
+
+     
+
+
+      // Append sources to the video element
+      
+
+      // Insert video into the container
+    }
+  }
+
+  // Call loadMedia when the page is loaded
+  window.addEventListener("load", loadMedia);
+  
+  // Call loadMedia when the window is resized
+  window.addEventListener("resize", loadMedia);
+
+
   function getScrollBarWidth() {
     var outer = document.createElement('div');
     outer.style.visibility = 'hidden';
