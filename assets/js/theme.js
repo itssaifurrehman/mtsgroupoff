@@ -8,7 +8,7 @@
   //   return window.innerWidth <= 768;  // Adjust threshold as needed
   // }
 
-  // // Function to dynamically load the video or image
+  // Function to dynamically load the video or image
   // function loadMedia() {
   //   const mediaContainer = document.getElementById("mediaContainer");
 
@@ -74,11 +74,11 @@
   //   }
   // }
 
-  // Call loadMedia when the page is loaded
-  window.addEventListener("load", loadMedia);
+  // // Call loadMedia when the page is loaded
+  // window.addEventListener("load", loadMedia);
   
-  // Call loadMedia when the window is resized
-  window.addEventListener("resize", loadMedia);
+  // // Call loadMedia when the window is resized
+  // window.addEventListener("resize", loadMedia);
 
 
   function getScrollBarWidth() {
