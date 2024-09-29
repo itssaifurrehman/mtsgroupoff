@@ -1887,7 +1887,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   .top-menu{
-    font-size: 9px !important;
+    font-size: 8px !important;
   }
   .header-fixed {
     /* bottom: -75px !important; */
@@ -2013,10 +2013,10 @@ display: none;
     top: 30% !important;
   }
   .zoom-image-head__subtitle {
-    margin-bottom: 0px !important;
+    margin-bottom: 10px !important;
   }
   .zoom-image-head__text{
-    font-size: 15px;
+    font-size: 12px;
   }
   .service-detail__subtitlevv1{
     font-size: 30px;
@@ -2208,10 +2208,10 @@ display: none;
     /* padding-left: 5%; */
   }
   .zoom-image-head__title{
-    margin-bottom: 2vh;
-    font-size: 85px;
+    margin-bottom: 4vh;
+    font-size: 70px;
   }
   .zoom-image-head__subtitle{
-    font-size: 85px;
+    font-size: 70px;
   }
 }
