@@ -9081,6 +9081,9 @@ zoom-image-head
   bottom: -8%;*/
   width: 100%; 
   z-index: 2;
+  will-change: opacity, transform; /* for optimization */
+  opacity: 1; /* Ensure it starts fully opaque */
+  transition: opacity 0.3s ease-out;
 }
 /* .zoom-image-head__bg2Mobile{
   display: none;

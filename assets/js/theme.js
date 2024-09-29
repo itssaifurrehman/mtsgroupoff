@@ -1278,77 +1278,317 @@ window.addEventListener('scroll', function () {
   //   }
   // })();
 
-
-  (function () {
-    const bodyWrapper = document.querySelector('.zoom-image-head');
-    const body = document.querySelector('.zoom-image-head__body');
-    const bg = document.querySelector('.zoom-image-head__bg');
-    const bg2 = document.querySelector('.zoom-image-head__bg2');
-    const content = document.querySelector('.zoom-image-head__content');
-    const counterBlock = document.querySelector('.zoom-counter__card');
-    const counterTitle = document.querySelector('.zoom-counter__title');
-    const counterText = document.querySelector('.zoom-counter__text');
-    const counterLink = document.querySelector('.zoom-counter__read-more');
-    const typedElement = document.querySelector('.zoom-counter__subtitle');
+// Last used
+  // (function () {
+  //   const bodyWrapper = document.querySelector('.zoom-image-head');
+  //   const body = document.querySelector('.zoom-image-head__body');
+  //   const bg = document.querySelector('.zoom-image-head__bg');
+  //   const bg2 = document.querySelector('.zoom-image-head__bg2');
+  //   const content = document.querySelector('.zoom-image-head__content');
+  //   const counterBlock = document.querySelector('.zoom-counter__card');
+  //   const counterTitle = document.querySelector('.zoom-counter__title');
+  //   const counterText = document.querySelector('.zoom-counter__text');
+  //   const counterLink = document.querySelector('.zoom-counter__read-more');
+  //   const typedElement = document.querySelector('.zoom-counter__subtitle');
     
-    let contentIsVisible = false;
-    let ticking = false;
-    let height = bodyWrapper.offsetHeight; // Cache height to avoid recalculating
-    const typedElementString = typedElement?.innerText || '';
-    typedElement.innerHTML = ''; // Clear element for typed effect
+  //   let contentIsVisible = false;
+  //   let ticking = false;
+  //   let height = bodyWrapper.offsetHeight; // Cache height to avoid recalculating
+  //   const typedElementString = typedElement?.innerText || '';
+  //   typedElement.innerHTML = ''; // Clear element for typed effect
   
-    // Add `will-change` to elements that will be animated to optimize rendering
-    bg.style.willChange = 'opacity, transform';
-    bg2.style.willChange = 'opacity, transform';
-    content.style.willChange = 'opacity, transform';
-    counterBlock.style.willChange = 'transform, opacity';
-    counterTitle.style.willChange = 'transform, opacity';
-    counterText.style.willChange = 'transform, opacity';
-    counterLink.style.willChange = 'transform, opacity';
+  //   // Add `will-change` to elements that will be animated to optimize rendering
+  //   bg.style.willChange = 'opacity, transform';
+  //   bg2.style.willChange = 'opacity, transform';
+  //   content.style.willChange = 'opacity, transform';
+  //   counterBlock.style.willChange = 'transform, opacity';
+  //   counterTitle.style.willChange = 'transform, opacity';
+  //   counterText.style.willChange = 'transform, opacity';
+  //   counterLink.style.willChange = 'transform, opacity';
   
-    // Function to apply scroll-based transformations
-    const checkPosition = () => {
-      const scroll = window.scrollY || window.pageYOffset;
+  //   // Function to apply scroll-based transformations
+  //   const checkPosition = () => {
+  //     const scroll = window.scrollY || window.pageYOffset;
       
+  //     // Avoid unnecessary recalculations if scroll is unchanged
+  //     if (scroll > height && !contentIsVisible) {
+  //       showCounterContent();
+  //     }
+  
+  //     if (scroll > height) {
+  //       body.style.display = 'none';
+  //     } else {
+  //       body.style.display = '';
+  //     }
+  
+  //     const scrollRatio = scroll / height;
+  //     const opacity = Math.max(1 - scrollRatio, 0);
+  //     const scale = 1 + (scrollRatio * 0.5);
+  //     const translateBgX = (scrollRatio * -15).toFixed(2);
+  //     const translateBgY = (scrollRatio * -12).toFixed(2);
+  //     const translateBg2X = (scrollRatio * 4).toFixed(2);
+  //     const translateBg2Y = (scrollRatio * 15).toFixed(2);
+  //     const translateContentY = (scrollRatio * -15).toFixed(2);
+  
+  //     // Apply styles only when necessary to avoid redundant repaints
+  //     if (opacity !== bg.style.opacity) {
+  //       bg.style.opacity = (opacity * 2).toFixed(2);
+  //       bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
+  //       bg2.style.opacity = (opacity * 2).toFixed(2);
+  //       bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+  //     }
+  
+  //     if (content.style.opacity !== opacity) {
+  //       const contentOpacity = Math.max(1 - (scrollRatio * 1.5), 0).toFixed(2);
+  //       content.style.opacity = contentOpacity;
+  //       content.style.transform = `translateY(${translateContentY}%)`;
+  //     }
+  //   };
+  
+  //   // Function to show the counter content with typed effect
+  //   const showCounterContent = () => {
+  //     contentIsVisible = true;
+  
+  //     // Use CSS transitions or direct style changes to show elements
+  //     counterBlock.style.transform = 'translateX(0)';
+  //     counterBlock.style.opacity = '1';
+  //     counterTitle.style.transform = 'translateY(0)';
+  //     counterTitle.style.opacity = '1';
+  //     counterText.style.transform = 'translateY(0)';
+  //     counterText.style.opacity = '1';
+  //     counterLink.style.transform = 'translateY(0)';
+  //     counterLink.style.opacity = '1';
+  
+  //     // Initialize typed.js effect
+  //     new Typed(typedElement, {
+  //       strings: [typedElementString],
+  //       typeSpeed: 40,
+  //       backSpeed: 0,
+  //       startDelay: 500,
+  //       showCursor: false
+  //     });
+  //   };
+  
+  //   // Scroll event throttling using requestAnimationFrame
+  //   const onScroll = () => {
+  //     if (!ticking) {
+  //       requestAnimationFrame(() => {
+  //         checkPosition();
+  //         ticking = false;
+  //       });
+  //       ticking = true;
+  //     }
+  //   };
+  
+  //   // Set initial styles for animation and reset scroll
+  //   const setInitialStyles = () => {
+  //     document.documentElement.scrollTop = 0; // Reset scroll to top
+  //     body.style.position = 'fixed';
+  //   };
+  
+  //   if (body || detectMobile.isMobile) {
+  //     setInitialStyles();
+  //     window.addEventListener('scroll', onScroll);
+  
+  //     // Recalculate height on window resize, only when necessary
+  //     window.addEventListener('resize', () => {
+  //       height = bodyWrapper.offsetHeight;
+  //     });
+  //   }
+  // })();
+
+//   (function () {
+//     const bodyWrapper = document.querySelector('.zoom-image-head');
+//     const body = document.querySelector('.zoom-image-head__body');
+//     const bg = document.querySelector('.zoom-image-head__bg');
+//     const bg2 = document.querySelector('.zoom-image-head__bg2');
+//     const content = document.querySelector('.zoom-image-head__content');
+//     const counterBlock = document.querySelector('.zoom-counter__card');
+//     const counterTitle = document.querySelector('.zoom-counter__title');
+//     const counterText = document.querySelector('.zoom-counter__text');
+//     const counterLink = document.querySelector('.zoom-counter__read-more');
+//     const typedElement = document.querySelector('.zoom-counter__subtitle');
+
+//     let contentIsVisible = false;
+//     let ticking = false;
+//     let height = bodyWrapper.offsetHeight; // Cache height to avoid recalculating
+//     const typedElementString = typedElement?.innerText || '';
+//     typedElement.innerHTML = ''; // Clear element for typed effect
+
+//     // Add `will-change` to elements that will be animated to optimize rendering
+//     bg.style.willChange = 'opacity, transform';
+//     bg2.style.willChange = 'opacity, transform';
+//     content.style.willChange = 'opacity, transform';
+//     counterBlock.style.willChange = 'transform, opacity';
+//     counterTitle.style.willChange = 'transform, opacity';
+//     counterText.style.willChange = 'transform, opacity';
+//     counterLink.style.willChange = 'transform, opacity';
+
+//     // Function to apply scroll-based transformations
+//     const checkPosition = () => {
+//         const scroll = window.scrollY || window.pageYOffset;
+
+//         // Avoid unnecessary recalculations if scroll is unchanged
+//         if (scroll > height && !contentIsVisible) {
+//             showCounterContent();
+//         }
+
+//         if (scroll > height) {
+//             body.style.display = 'none';
+//         } else {
+//             body.style.display = '';
+//         }
+
+//         const scrollRatio = Math.min(scroll / height, 1); // Clamp scroll ratio to [0, 1]
+//         const opacity = Math.max(1 - scrollRatio, 0);
+//         const scale = 1 + (scrollRatio * 0.5);
+        
+//         // Mobile specific adjustments
+//         const translateBgX = (scrollRatio * (window.innerWidth < 768 ? -10 : -15)).toFixed(2);
+//         const translateBgY = (scrollRatio * (window.innerWidth < 768 ? -8 : -12)).toFixed(2);
+//         const translateBg2X = (scrollRatio * (window.innerWidth < 768 ? 2 : 4)).toFixed(2);
+//         const translateBg2Y = (scrollRatio * (window.innerWidth < 768 ? 10 : 15)).toFixed(2);
+//         const translateContentY = (scrollRatio * -15).toFixed(2);
+
+//         // Apply styles only when necessary to avoid redundant repaints
+//         if (bg.style.opacity !== (opacity * 2).toFixed(2)) {
+//             bg.style.opacity = (opacity * 2).toFixed(2);
+//             bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
+//             bg2.style.opacity = (opacity * 2).toFixed(2);
+//             bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+//         }
+
+//         if (content.style.opacity !== opacity) {
+//             const contentOpacity = Math.max(1 - (scrollRatio * 1.5), 0).toFixed(2);
+//             content.style.opacity = contentOpacity;
+//             content.style.transform = `translateY(${translateContentY}%)`;
+//         }
+//     };
+
+//     // Function to show the counter content
+//     const showCounterContent = () => {
+//         contentIsVisible = true;
+
+//         // Use CSS transitions or direct style changes to show elements
+//         counterBlock.style.transform = 'translateX(0)';
+//         counterBlock.style.opacity = '1';
+//         counterTitle.style.transform = 'translateY(0)';
+//         counterTitle.style.opacity = '1';
+//         counterText.style.transform = 'translateY(0)';
+//         counterText.style.opacity = '1';
+//         counterLink.style.transform = 'translateY(0)';
+//         counterLink.style.opacity = '1';
+//     };
+
+//     // Scroll event throttling using requestAnimationFrame
+//     const onScroll = () => {
+//         if (!ticking) {
+//             requestAnimationFrame(() => {
+//                 checkPosition();
+//                 ticking = false;
+//             });
+//             ticking = true;
+//         }
+//     };
+
+//     // Set initial styles for animation and reset scroll
+//     const setInitialStyles = () => {
+//         window.scrollTo(0, 0); // Reset scroll to top
+//         if (!detectMobile.isMobile) { // Only apply fixed for non-mobile
+//             body.style.position = 'fixed';
+//         }
+//     };
+
+//     // Recalculate height on window resize, only when necessary
+//     let resizeTimeout;
+//     const recalculateHeight = () => {
+//         height = bodyWrapper.offsetHeight;
+//     };
+
+//     window.addEventListener('resize', () => {
+//         clearTimeout(resizeTimeout);
+//         resizeTimeout = setTimeout(recalculateHeight, 100); // Delay execution
+//     });
+
+//     if (body || detectMobile.isMobile) {
+//         setInitialStyles();
+//         window.addEventListener('scroll', onScroll);
+//         window.addEventListener('touchmove', onScroll); // Add touch support
+//     }
+// })();
+
+(function () {
+  const bodyWrapper = document.querySelector('.zoom-image-head');
+  const body = document.querySelector('.zoom-image-head__body');
+  const bg = document.querySelector('.zoom-image-head__bg');
+  const bg2 = document.querySelector('.zoom-image-head__bg2');
+  const content = document.querySelector('.zoom-image-head__content');
+  const counterBlock = document.querySelector('.zoom-counter__card');
+  const counterTitle = document.querySelector('.zoom-counter__title');
+  const counterText = document.querySelector('.zoom-counter__text');
+  const counterLink = document.querySelector('.zoom-counter__read-more');
+  const typedElement = document.querySelector('.zoom-counter__subtitle');
+
+  let contentIsVisible = false;
+  let ticking = false;
+  let height = bodyWrapper.offsetHeight; // Cache height to avoid recalculating
+  const typedElementString = typedElement?.innerText || '';
+  typedElement.innerHTML = ''; // Clear element for typed effect
+
+  // Initial styles for bg2
+  bg2.style.opacity = '1'; // Ensure bg2 starts fully opaque
+  bg2.style.transform = 'translateY(0%)'; // Start without translation
+  bg2.style.willChange = 'opacity, transform'; // Optimize rendering
+
+  // Function to apply scroll-based transformations
+  const checkPosition = () => {
+      const scroll = window.scrollY || window.pageYOffset;
+
       // Avoid unnecessary recalculations if scroll is unchanged
       if (scroll > height && !contentIsVisible) {
-        showCounterContent();
+          showCounterContent();
       }
-  
-      if (scroll > height) {
-        body.style.display = 'none';
-      } else {
-        body.style.display = '';
-      }
-  
-      const scrollRatio = scroll / height;
+
+      // Hide body when scrolling down past height
+      body.style.display = scroll > height ? 'none' : '';
+
+      const scrollRatio = Math.min(scroll / height, 1); // Clamp scroll ratio to [0, 1]
       const opacity = Math.max(1 - scrollRatio, 0);
       const scale = 1 + (scrollRatio * 0.5);
-      const translateBgX = (scrollRatio * -15).toFixed(2);
-      const translateBgY = (scrollRatio * -12).toFixed(2);
-      const translateBg2X = (scrollRatio * 4).toFixed(2);
-      const translateBg2Y = (scrollRatio * 15).toFixed(2);
+
+      // Mobile specific adjustments
+      const isMobile = window.innerWidth < 768;
+      const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
+      const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
+      const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
+      const translateBg2Y = (scrollRatio * (isMobile ? 10 : 15)).toFixed(2);
       const translateContentY = (scrollRatio * -15).toFixed(2);
-  
+
       // Apply styles only when necessary to avoid redundant repaints
-      if (opacity !== bg.style.opacity) {
-        bg.style.opacity = (opacity * 2).toFixed(2);
-        bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
-        bg2.style.opacity = (opacity * 2).toFixed(2);
-        bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+      if (bg.style.opacity !== (opacity * 2).toFixed(2)) {
+          bg.style.opacity = (opacity * 2).toFixed(2);
+          bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
       }
-  
-      if (content.style.opacity !== opacity) {
-        const contentOpacity = Math.max(1 - (scrollRatio * 1.5), 0).toFixed(2);
-        content.style.opacity = contentOpacity;
-        content.style.transform = `translateY(${translateContentY}%)`;
+
+      // Ensure bg2 opacity reduces correctly
+      const bg2Opacity = Math.max(1 - (scrollRatio * 2), 0).toFixed(2); // Adjust opacity calculation
+      if (bg2.style.opacity !== bg2Opacity) {
+          bg2.style.opacity = bg2Opacity;
+          bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
       }
-    };
-  
-    // Function to show the counter content with typed effect
-    const showCounterContent = () => {
+
+      // Update content opacity
+      const contentOpacity = Math.max(1 - (scrollRatio * 1.5), 0).toFixed(2);
+      if (content.style.opacity !== contentOpacity) {
+          content.style.opacity = contentOpacity;
+          content.style.transform = `translateY(${translateContentY}%)`;
+      }
+  };
+
+  // Function to show the counter content
+  const showCounterContent = () => {
       contentIsVisible = true;
-  
+
       // Use CSS transitions or direct style changes to show elements
       counterBlock.style.transform = 'translateX(0)';
       counterBlock.style.opacity = '1';
@@ -1358,44 +1598,45 @@ window.addEventListener('scroll', function () {
       counterText.style.opacity = '1';
       counterLink.style.transform = 'translateY(0)';
       counterLink.style.opacity = '1';
-  
-      // Initialize typed.js effect
-      new Typed(typedElement, {
-        strings: [typedElementString],
-        typeSpeed: 40,
-        backSpeed: 0,
-        startDelay: 500,
-        showCursor: false
-      });
-    };
-  
-    // Scroll event throttling using requestAnimationFrame
-    const onScroll = () => {
+  };
+
+  // Scroll event throttling using requestAnimationFrame
+  const onScroll = () => {
       if (!ticking) {
-        requestAnimationFrame(() => {
-          checkPosition();
-          ticking = false;
-        });
-        ticking = true;
+          requestAnimationFrame(() => {
+              checkPosition();
+              ticking = false;
+          });
+          ticking = true;
       }
-    };
-  
-    // Set initial styles for animation and reset scroll
-    const setInitialStyles = () => {
-      document.documentElement.scrollTop = 0; // Reset scroll to top
+  };
+
+  // Set initial styles for animation and reset scroll
+  const setInitialStyles = () => {
+      window.scrollTo(0, 0); // Reset scroll to top
       body.style.position = 'fixed';
-    };
-  
-    if (body || detectMobile.isMobile) {
-      setInitialStyles();
-      window.addEventListener('scroll', onScroll);
-  
-      // Recalculate height on window resize, only when necessary
-      window.addEventListener('resize', () => {
-        height = bodyWrapper.offsetHeight;
-      });
-    }
-  })();
+  };
+
+  // Recalculate height on window resize, only when necessary
+  let resizeTimeout;
+  const recalculateHeight = () => {
+      height = bodyWrapper.offsetHeight;
+  };
+
+  window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(recalculateHeight, 100); // Delay execution
+  });
+
+  setInitialStyles();
+  window.addEventListener('scroll', onScroll);
+})();
+
+
+
+
+
+
   
   
   
