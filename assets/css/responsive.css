@@ -2220,4 +2220,7 @@ display: none;
   .articles-list__item {
     margin-bottom: 50px  !important;
   }
+  .article-listing-item__text{
+    font-size: 13px;
+  }
 }

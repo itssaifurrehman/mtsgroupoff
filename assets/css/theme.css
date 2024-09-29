@@ -535,7 +535,7 @@ article-listing-item
 .article-listing-item__title {
   display: block;
   font-family: 'Teko', Helvetica, sans-serif;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 1;
   margin-bottom: 32px;
   text-transform: uppercase;
@@ -558,6 +558,8 @@ article-listing-item
   min-height: 255px;
   color: #666;
   transition: 0.3s;
+  font-size: 19px;
+
 }
 
 .article-listing-item:hover .article-listing-item__text {
