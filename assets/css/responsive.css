@@ -2081,7 +2081,7 @@ display: none;
     margin-top: 10vh;
   }
   .studio-intro-slide__innerConst{
-    margin-top: 50%;
+    margin-top: 50vh;
   }
   .header__container{
     width: 100%;
@@ -2144,6 +2144,7 @@ display: none;
   }
   .article-listing-item__title{ 
     margin-bottom: 1px !important;
+    font-size: 40px;
   }
   .last-line{
     display: block;
@@ -2215,5 +2216,8 @@ display: none;
   }
   .zoom-image-head__subtitle{
     font-size: 70px;
+  }
+  .articles-list__item {
+    margin-bottom: 50px  !important;
   }
 }

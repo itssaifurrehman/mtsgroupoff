@@ -1518,10 +1518,11 @@ window.addEventListener('scroll', function () {
 // })();
 
 (function () {
+  const isMobile = window.innerWidth < 768;
   const bodyWrapper = document.querySelector('.zoom-image-head');
   const body = document.querySelector('.zoom-image-head__body');
   const bg = document.querySelector('.zoom-image-head__bg');
-  const bg2 = document.querySelector('.zoom-image-head__bg2');
+  const bg2 = isMobile ? document.querySelector('.mobileSetting') : document.querySelector('.zoom-image-head__bg2');
   const content = document.querySelector('.zoom-image-head__content');
   const counterBlock = document.querySelector('.zoom-counter__card');
   const counterTitle = document.querySelector('.zoom-counter__title');
@@ -1557,7 +1558,6 @@ window.addEventListener('scroll', function () {
       const scale = 1 + (scrollRatio * 0.5);
 
       // Mobile specific adjustments
-      const isMobile = window.innerWidth < 768;
       const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
       const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
       const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
