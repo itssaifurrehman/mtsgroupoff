@@ -1919,8 +1919,9 @@ display: none;
   }
 
   .whatsapp-icon1 {
-    bottom: -1% !important;
-  }
+    bottom: -2vh !important;
+    left: 0;
+    }
 
   .zoom-counter__title {
     font-size: 40px;
