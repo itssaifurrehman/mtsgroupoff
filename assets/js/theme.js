@@ -1053,142 +1053,232 @@ window.addEventListener('scroll', function () {
   })();
 
   // zoom-image-head
+  // (function () {
+  //   var bodyWrapper = document.querySelector('.zoom-image-head');
+  //   var body = document.querySelector('.zoom-image-head__body');
+  //   var bg = document.querySelector('.zoom-image-head__bg');
+  //   var bg2 = document.querySelector('.zoom-image-head__bg2');
+  //   var content = document.querySelector('.zoom-image-head__content');
+  //   var contentSubtitle = document.querySelector('.zoom-image-head__subtitle');
+  //   var contentTitle = document.querySelector('.zoom-image-head__title');
+  //   var contentText = document.querySelector('.zoom-image-head__text');
+  //   var contentIcon = document.querySelector('.zoom-image-head__icon');
+  //   var counterBlock = document.querySelector('.zoom-counter__card');
+  //   var counterTitle = document.querySelector('.zoom-counter__title');
+  //   var counterText = document.querySelector('.zoom-counter__text');
+  //   var counterLink = document.querySelector('.zoom-counter__read-more');
+  //   var typedElement = document.querySelector('.zoom-counter__subtitle');
+
+  //   if (body || detectMobile.isMobile) {
+  //     var checkPosition = function checkPosition() {
+  //       var scroll = $(window).scrollTop();
+  //       var height = bodyWrapper.offsetHeight;
+  //       var opacity = (1 - scroll / height) * 2;
+  //       opacity = opacity > 1 ? 1 : opacity;
+  //       var contentOpacity = (1 - scroll / height) * 1.5;
+  //       contentOpacity = contentOpacity > 1 ? 1 : contentOpacity;
+  //       var scale = 1 + scroll / height * 0.5;
+  //       var bgX = "".concat(scroll / height * -15, "%");
+  //       var bgY = "".concat(scroll / height * -12, "%");
+  //       var bg2X = "".concat(scroll / height * 4, "%");
+  //       var bg2Y = "".concat(scroll / height * 15, "%");
+  //       tl2.set(bg, {
+  //         opacity: opacity,
+  //         scale: scale,
+  //         x: bgX,
+  //         y: bgY
+  //       }).set(bg2, {
+  //         opacity: opacity,
+  //         scale: scale,
+  //         x: bg2X,
+  //         y: bg2Y
+  //       }).set(content, {
+  //         opacity: contentOpacity,
+  //         y: "".concat(scroll / height * -15, "%")
+  //       });
+
+  //       if (scroll > height) {
+  //         tl2.set(body, {
+  //           display: 'none'
+  //         });
+  //       } else {
+  //         tl2.set(body, {
+  //           display: ''
+  //         });
+  //       }
+
+  //       if (scroll > height && !contentIsVisible) {
+  //         tl2.to(counterBlock, 0.5, {
+  //           x: 0,
+  //           opacity: 1
+  //         }).to(counterTitle, 0.5, {
+  //           y: 0,
+  //           opacity: 1
+  //         }, '+=1').to(counterText, 0.5, {
+  //           y: 0,
+  //           opacity: 1
+  //         }).to(counterLink, 0.5, {
+  //           y: 0,
+  //           opacity: 1
+  //         });
+  //         contentIsVisible = true;
+  //         var typed = new Typed(typedElement, {
+  //           strings: [typedElementString, typedElementString],
+  //           typeSpeed: 40,
+  //           backSpeed: 0,
+  //           startDelay: 500,
+  //           showCursor: false
+  //         });
+  //       }
+  //     };
+
+  //     var tl = new TimelineLite({
+  //       onComplete: function onComplete() {
+  //         checkPosition();
+  //         $(window).scroll(function () {
+  //           checkPosition();
+  //         });
+  //       }
+  //     });
+  //     tl.set(bg, {
+  //       opacity: 0,
+  //       scale: 1.5,
+  //       x: '-15%',
+  //       y: '-12%'
+  //     }).set(bg2, {
+  //       opacity: 0,
+  //       scale: 1.5,
+  //       x: '4%',
+  //       y: '15%'
+  //     }).set([contentSubtitle, contentTitle, contentText, contentIcon], {
+  //       opacity: 0,
+  //       y: 30
+  //     }).call(function () {
+  //       document.querySelector('html').scrollTop = 0;
+  //     }, null, null, '+=1').to(bg, 1.5, {
+  //       opacity: 1,
+  //       scale: 1,
+  //       x: '0%',
+  //       y: '0%'
+  //     }).to(bg2, 1.5, {
+  //       opacity: 1,
+  //       scale: 1,
+  //       x: '0%',
+  //       y: '0%'
+  //     }, '-=1.5').staggerTo([contentSubtitle, contentTitle, contentText, contentIcon], 1, {
+  //       opacity: 1,
+  //       y: 0
+  //     }, .2, '-=.6');
+  //     body.style.position = 'fixed';
+  //     var typedElementString = typedElement.innerText;
+  //     typedElement.innerHTML = '';
+  //     var contentIsVisible = false;
+  //     var tl2 = new TimelineLite();
+  //     tl2.set(counterBlock, {
+  //       x: -100,
+  //       opacity: 0
+  //     }).set(counterTitle, {
+  //       y: 20,
+  //       opacity: 0
+  //     }).set(counterText, {
+  //       y: 20,
+  //       opacity: 0
+  //     }).set(counterLink, {
+  //       y: 20,
+  //       opacity: 0
+  //     });
+  //   } 
+  // })();
   (function () {
-    var bodyWrapper = document.querySelector('.zoom-image-head');
-    var body = document.querySelector('.zoom-image-head__body');
-    var bg = document.querySelector('.zoom-image-head__bg');
-    var bg2 = document.querySelector('.zoom-image-head__bg2');
-    var content = document.querySelector('.zoom-image-head__content');
-    var contentSubtitle = document.querySelector('.zoom-image-head__subtitle');
-    var contentTitle = document.querySelector('.zoom-image-head__title');
-    var contentText = document.querySelector('.zoom-image-head__text');
-    var contentIcon = document.querySelector('.zoom-image-head__icon');
-    var counterBlock = document.querySelector('.zoom-counter__card');
-    var counterTitle = document.querySelector('.zoom-counter__title');
-    var counterText = document.querySelector('.zoom-counter__text');
-    var counterLink = document.querySelector('.zoom-counter__read-more');
-    var typedElement = document.querySelector('.zoom-counter__subtitle');
-
-    if (body || detectMobile.isMobile) {
-      var checkPosition = function checkPosition() {
-        var scroll = $(window).scrollTop();
-        var height = bodyWrapper.offsetHeight;
-        var opacity = (1 - scroll / height) * 2;
-        opacity = opacity > 1 ? 1 : opacity;
-        var contentOpacity = (1 - scroll / height) * 1.5;
-        contentOpacity = contentOpacity > 1 ? 1 : contentOpacity;
-        var scale = 1 + scroll / height * 0.5;
-        var bgX = "".concat(scroll / height * -15, "%");
-        var bgY = "".concat(scroll / height * -12, "%");
-        var bg2X = "".concat(scroll / height * 4, "%");
-        var bg2Y = "".concat(scroll / height * 15, "%");
-        tl2.set(bg, {
-          opacity: opacity,
-          scale: scale,
-          x: bgX,
-          y: bgY
-        }).set(bg2, {
-          opacity: opacity,
-          scale: scale,
-          x: bg2X,
-          y: bg2Y
-        }).set(content, {
-          opacity: contentOpacity,
-          y: "".concat(scroll / height * -15, "%")
-        });
-
-        if (scroll > height) {
-          tl2.set(body, {
-            display: 'none'
-          });
-        } else {
-          tl2.set(body, {
-            display: ''
-          });
-        }
-
-        if (scroll > height && !contentIsVisible) {
-          tl2.to(counterBlock, 0.5, {
-            x: 0,
-            opacity: 1
-          }).to(counterTitle, 0.5, {
-            y: 0,
-            opacity: 1
-          }, '+=1').to(counterText, 0.5, {
-            y: 0,
-            opacity: 1
-          }).to(counterLink, 0.5, {
-            y: 0,
-            opacity: 1
-          });
-          contentIsVisible = true;
-          var typed = new Typed(typedElement, {
-            strings: [typedElementString, typedElementString],
-            typeSpeed: 40,
-            backSpeed: 0,
-            startDelay: 500,
-            showCursor: false
-          });
-        }
-      };
-
-      var tl = new TimelineLite({
-        onComplete: function onComplete() {
+    const bodyWrapper = document.querySelector('.zoom-image-head');
+    const body = document.querySelector('.zoom-image-head__body');
+    const bg = document.querySelector('.zoom-image-head__bg');
+    const bg2 = document.querySelector('.zoom-image-head__bg2');
+    const content = document.querySelector('.zoom-image-head__content');
+    const counterBlock = document.querySelector('.zoom-counter__card');
+    const counterTitle = document.querySelector('.zoom-counter__title');
+    const counterText = document.querySelector('.zoom-counter__text');
+    const counterLink = document.querySelector('.zoom-counter__read-more');
+    const typedElement = document.querySelector('.zoom-counter__subtitle');
+    let contentIsVisible = false;
+    let ticking = false;
+  
+    const typedElementString = typedElement?.innerText || '';
+    typedElement.innerHTML = ''; // Clear element for typed effect
+  
+    // Function to apply scroll-based transformations
+    const checkPosition = () => {
+      const scroll = window.scrollY || window.pageYOffset;
+      const height = bodyWrapper.offsetHeight;
+      const opacity = Math.max(1 - scroll / height, 0);
+      const scale = 1 + (scroll / height) * 0.5;
+  
+      // Update background positions and opacity
+      bg.style.opacity = (opacity * 2).toFixed(2); // Limit decimal points for better performance
+      bg.style.transform = `scale(${scale.toFixed(2)}) translate(${(scroll / height * -15).toFixed(2)}%, ${(scroll / height * -12).toFixed(2)}%)`;
+      bg2.style.opacity = (opacity * 2).toFixed(2);
+      bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${(scroll / height * 4).toFixed(2)}%, ${(scroll / height * 15).toFixed(2)}%)`;
+  
+      // Update content visibility
+      const contentOpacity = Math.max(1 - (scroll / height) * 1.5, 0);
+      content.style.opacity = contentOpacity.toFixed(2);
+      content.style.transform = `translateY(${(scroll / height * -15).toFixed(2)}%)`;
+  
+      // Toggle content visibility based on scroll position
+      if (scroll > height && !contentIsVisible) {
+        showCounterContent();
+      }
+  
+      // Toggle body visibility
+      body.style.display = scroll > height ? 'none' : '';
+    };
+  
+    // Function to show the counter content with typed effect
+    const showCounterContent = () => {
+      contentIsVisible = true;
+      counterBlock.style.transform = 'translateX(0)';
+      counterBlock.style.opacity = '1';
+      counterTitle.style.transform = 'translateY(0)';
+      counterTitle.style.opacity = '1';
+      counterText.style.transform = 'translateY(0)';
+      counterText.style.opacity = '1';
+      counterLink.style.transform = 'translateY(0)';
+      counterLink.style.opacity = '1';
+  
+      // Initialize typed.js effect
+      new Typed(typedElement, {
+        strings: [typedElementString],
+        typeSpeed: 40,
+        backSpeed: 0,
+        startDelay: 500,
+        showCursor: false
+      });
+    };
+  
+    // Scroll event throttling using requestAnimationFrame
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
           checkPosition();
-          $(window).scroll(function () {
-            checkPosition();
-          });
-        }
-      });
-      tl.set(bg, {
-        opacity: 0,
-        scale: 1.5,
-        x: '-15%',
-        y: '-12%'
-      }).set(bg2, {
-        opacity: 0,
-        scale: 1.5,
-        x: '4%',
-        y: '15%'
-      }).set([contentSubtitle, contentTitle, contentText, contentIcon], {
-        opacity: 0,
-        y: 30
-      }).call(function () {
-        document.querySelector('html').scrollTop = 0;
-      }, null, null, '+=1').to(bg, 1.5, {
-        opacity: 1,
-        scale: 1,
-        x: '0%',
-        y: '0%'
-      }).to(bg2, 1.5, {
-        opacity: 1,
-        scale: 1,
-        x: '0%',
-        y: '0%'
-      }, '-=1.5').staggerTo([contentSubtitle, contentTitle, contentText, contentIcon], 1, {
-        opacity: 1,
-        y: 0
-      }, .2, '-=.6');
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+  
+    // Set initial styles for animation and reset scroll
+    const setInitialStyles = () => {
+      document.documentElement.scrollTop = 0; // Reset scroll to top
       body.style.position = 'fixed';
-      var typedElementString = typedElement.innerText;
-      typedElement.innerHTML = '';
-      var contentIsVisible = false;
-      var tl2 = new TimelineLite();
-      tl2.set(counterBlock, {
-        x: -100,
-        opacity: 0
-      }).set(counterTitle, {
-        y: 20,
-        opacity: 0
-      }).set(counterText, {
-        y: 20,
-        opacity: 0
-      }).set(counterLink, {
-        y: 20,
-        opacity: 0
-      });
-    } 
+    };
+  
+    if (body || detectMobile.isMobile) {
+      setInitialStyles();
+      window.addEventListener('scroll', onScroll);
+    }
   })();
+  
+  
 
   // zoom-slider
   (function () {
