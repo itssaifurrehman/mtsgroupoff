@@ -2190,7 +2190,7 @@ display: none;
   .studio-intro-slideConstructionCon {
     display: -ms-flexbox;
     display: flex;
-    min-height: 60vh;
+    min-height: 100vh;
     background-size: cover;
     text-align: center;
     position: relative !important;
