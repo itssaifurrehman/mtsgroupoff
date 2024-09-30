@@ -190,20 +190,20 @@
     }
   }, 40);
 
-  if (!detectMobile.isMobile) {
+  if ($('.js-counter').length) {
+    counter();
+  }
+  $(window).scroll(function () {
     if ($('.js-counter').length) {
       counter();
     }
+  });
 
+  if (!detectMobile.isMobile) {
     if ($('.js-motion-svg').length) {
       svgAnimation();
     }
-
     $(window).scroll(function () {
-      if ($('.js-counter').length) {
-        counter();
-      }
-
       if ($('.js-motion-svg').length) {
         svgAnimation();
       }
