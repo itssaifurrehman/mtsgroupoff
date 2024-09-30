@@ -1,6 +1,5 @@
 @media (min-width: 1200px) {
   .container {
-    /* padding-right: 60px; */
     padding-top: 13%;
   }
   .containerContactus {
@@ -538,7 +537,6 @@
   }
 
   .header-fixed__bottom {
-    /* display: none; */
     font-size: 15px;
   }
 
@@ -958,7 +956,7 @@
   }
 }
 
-=======@media (min-width: 1200px) {
+@media (min-width: 1200px) {
   .container {
     /* padding-right: 60px; */
     padding-top: 13%;
