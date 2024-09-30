@@ -2078,10 +2078,10 @@ display: none;
     object-position: 26% !important;
   }
   .studio-intro-slide__innerReal {
-    margin-top: 55vh;
+    margin-top: 50vh;
   }
   .studio-intro-slide__innerConst{
-    margin-top: 55vh;
+    margin-top: 50vh;
   }
   .header__container{
     width: 100%;
@@ -2185,7 +2185,7 @@ display: none;
     min-height: 100vh;
   }
   .studio-intro-slide__innerDesign{
-    margin-top: 55vh;
+    margin-top: 50vh;
 
   }
   .articles-list{
