@@ -7784,13 +7784,6 @@ studio-intro-slide
   /* padding-left: 5%; */
 }
 
-.Background video:nth-child(2) {
-  display: block;
-}
-
-.Background video:nth-child(1) {
-  display: none;
-}
 
 .Background {
   position: absolute;
@@ -7839,11 +7832,11 @@ studio-intro-slide
   height: 100%;
 }
 
-/* .Background video {
+.Background video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-} */
+}
 
 .studio-intro-slide__container {
   display: -ms-flexbox;
@@ -9010,9 +9003,6 @@ zoom-counters
   position: relative;
   /* margin-right: 28px; */
   visibility: hidden;
-}
-.showimg{
-  display: none;
 }
 
 .zoom-counters__value-inner {
