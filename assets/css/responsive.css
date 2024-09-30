@@ -2068,6 +2068,13 @@ display: none;
     object-fit: cover;
     object-position: 28% !important;
   }
+
+  .Background1Desk img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 33% !important;
+  }
   .BackgroundAbo img{
     width: 100%;
     height: 100%;
