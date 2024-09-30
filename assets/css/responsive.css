@@ -2236,4 +2236,20 @@ display: none;
     font-size: 12px;
     margin-top: 5%;
   }
+  .top-menu__menu-link {
+    color: currentColor;
+    font-family: inherit;
+    text-decoration: none;
+    transition: 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase; 
+  }
+  .top-menu__menu-link_active {
+    background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
 }

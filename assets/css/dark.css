@@ -11,30 +11,6 @@ main {
   background: #2b2b2b;
 }
 
-.cards-block__text {
-  color: #999;
-}
-
-.collapse-list__collapse-text {
-  color: #999;
-}
-
-.comments {
-  background: #2b2b2b;
-}
-
-.comments__text {
-  color: #999;
-}
-
-.comment-card__text {
-  color: #999;
-}
-
-.comment-card__content {
-  border-color: #999;
-}
-
 .contact-block {
   border-color: #999;
 }
