@@ -2067,8 +2067,12 @@ display: none;
   .Background1 img{
     width: 100%;
     height: 100%;
-    /* object-fit: cover;
-    object-position: 28% !important; */
+    object-fit: cover;
+    object-position: 28% !important;
+  }
+  .BackgroundAbo img{
+    width: 100%;
+    height: 100%;
   }
   .showimg{
     display: block;
