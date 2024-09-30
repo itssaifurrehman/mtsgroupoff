@@ -2087,10 +2087,10 @@ display: none;
     object-position: 26% !important;
   }
   .studio-intro-slide__innerReal {
-    margin-top: 50vh;
+    margin-top: 45vh;
   }
   .studio-intro-slide__innerConst{
-    margin-top: 50vh;
+    margin-top: 45vh;
   }
   .header__container{
     width: 100%;
@@ -2194,7 +2194,7 @@ display: none;
     min-height: 100vh;
   }
   .studio-intro-slide__innerDesign{
-    margin-top: 50vh;
+    margin-top: 45vh;
 
   }
   .articles-list{
@@ -2231,5 +2231,9 @@ display: none;
   }
   .article-listing-item__text{
     font-size: 13px;
+  }
+  .studio-intro-slide__text {
+    font-size: 12px;
+    margin-top: 5%;
   }
 }
