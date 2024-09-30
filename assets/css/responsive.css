@@ -2053,20 +2053,20 @@ display: none;
     font-size: 40px;
     font-weight: 500;
     }
-  .Background video{
+   .Background video{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 36%;
-  }
+    /* object-position: 36%; */
+  } 
   .Background1 video{
-    display: none;
+    display: block;
   }
   .Background1 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 28% !important;
+    /* object-fit: cover;
+    object-position: 28% !important; */
   }
 
   .Background1Desk img{
@@ -2079,12 +2079,21 @@ display: none;
     width: 100%;
     height: 100%;
   }
+
+  .Background video:nth-child(1) {
+    display: block;
+  }
+
+  .Background video:nth-child(2) {
+    display: none;
+  }
+
   .showimg{
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 26% !important;
+    /* object-fit: cover;
+    object-position: 26% !important; */
   }
   .studio-intro-slide__innerReal {
     margin-top: 45vh;
