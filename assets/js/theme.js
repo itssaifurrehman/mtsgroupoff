@@ -1,6 +1,23 @@
 (function ($) {
   "use strict";
 
+  window.addEventListener('beforeunload', function() {
+    document.body.classList.add('fade-out');
+  });
+
+  const links = document.querySelectorAll('a:not([target="_blank"]):not([href^="#"])');
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('loading').classList.add('active'); // Show loading animation
+      document.body.classList.add('fade-out'); // Trigger fade-out animation
+      setTimeout(() => {
+        window.location.href = this.href; // Navigate after fade-out
+      }, 500); // Match duration of the fade-out transition
+    });
+  });
+
+
   function getScrollBarWidth() {
     var outer = document.createElement("div");
     outer.style.visibility = "hidden";
@@ -90,16 +107,16 @@
     $("body").addClass("no-mobile");
   }
 
-  var svgAnimation = throttle(function () {
-    $(".js-motion-svg:in-viewport").each(function () {
-      if (!$(this).hasClass("animated")) {
-        $(this).addClass("animated");
-        var myVivus = new Vivus(this, {
-          duration: 150,
-        });
-      }
-    });
-  }, 40);
+  // var svgAnimation = throttle(function () {
+  //   $(".js-motion-svg:in-viewport").each(function () {
+  //     if (!$(this).hasClass("animated")) {
+  //       $(this).addClass("animated");
+  //       var myVivus = new Vivus(this, {
+  //         duration: 150,
+  //       });
+  //     }
+  //   });
+  // }, 40);
 
   var counter = throttle(function () {
     if (typeof $.fn.jQuerySimpleCounter !== "undefined") {
@@ -140,25 +157,25 @@
     }
   });
 
-  if (!detectMobile.isMobile) {
-    if ($(".js-motion-svg").length) {
-      svgAnimation();
-    }
-    $(window).scroll(function () {
-      if ($(".js-motion-svg").length) {
-        svgAnimation();
-      }
-    });
-  }
+  // if (!detectMobile.isMobile) {
+  //   if ($(".js-motion-svg").length) {
+  //     svgAnimation();
+  //   }
+  //   $(window).scroll(function () {
+  //     if ($(".js-motion-svg").length) {
+  //       svgAnimation();
+  //     }
+  //   });
+  // }
 
-  $(".popup-video").magnificPopup({
-    disableOn: 700,
-    type: "iframe",
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false,
-    mainClass: "my-mfp-slide-bottom",
-  });
+  // $(".popup-video").magnificPopup({
+  //   disableOn: 700,
+  //   type: "iframe",
+  //   removalDelay: 160,
+  //   preloader: false,
+  //   fixedContentPos: false,
+  //   mainClass: "my-mfp-slide-bottom",
+  // });
 
   const inputFields = document.querySelectorAll(".contact-block__input-text");
 
@@ -261,32 +278,53 @@
     lastScrollPosition = currentScrollPosition;
   });
 
-  $(".animsition").animsition({
-    inClass: "fade-in",
-    outClass: "fade-out",
-    inDuration: 500,
-    outDuration: 500,
-    linkElement: 'a:not([target="_blank"]):not([href^="#"])',
-    loading: true,
-    loadingParentElement: "body",
+//   $(".animsition").animsition({
+//     inClass: "fade-in",
+//     outClass: "fade-out",
+//     inDuration: 200,
+//     outDuration: 200,
+//     linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+//     loading: true,
+//     loadingParentElement: "body",
+//     loadingClass: "animsition-loading2",
+//     loadingInner:
+//       '<div class="spinner">\n<div class="double-bounce1"></div>\n<div class="double-bounce2"></div>\n</div>',
+//     timeout: false,
+//     onLoadEvent: true,
+//     browser: ["animation-duration", "-webkit-animation-duration"],
+//     overlay: false,
+//     transition: function transition(url) {
+//       window.location.href = url;
+//     }
+// });
 
-    loadingClass: "animsition-loading2",
-    loadingInner:
-      '<div class="spinner">\n        <div class="double-bounce1"></div>\n      <div class="double-bounce2"></div>\n      </div>',
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: ["animation-duration", "-webkit-animation-duration"],
 
-    overlay: false,
-    overlayClass: "animsition-overlay-slide",
-    overlayParentElement: "body",
-    transition: function transition(url) {
-      window.location.href = url;
-    },
-  });
+  // $(".animsition").animsition({
+  //   inClass: "fade-in",
+  //   outClass: "fade-out",
+  //   inDuration: 500,
+  //   outDuration: 500,
+  //   linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+  //   loading: true,
+  //   loadingParentElement: "body",
 
-  svg4everybody();
+  //   loadingClass: "animsition-loading2",
+  //   loadingInner:
+  //     '<div class="spinner">\n        <div class="double-bounce1"></div>\n      <div class="double-bounce2"></div>\n      </div>',
+  //   timeout: false,
+  //   timeoutCountdown: 5000,
+  //   onLoadEvent: true,
+  //   browser: ["animation-duration", "-webkit-animation-duration"],
+
+  //   overlay: false,
+  //   overlayClass: "animsition-overlay-slide",
+  //   overlayParentElement: "body",
+  //   transition: function transition(url) {
+  //     window.location.href = url;
+  //   },
+  // });
+
+  // svg4everybody();
 
   (function () {
     var element = document.querySelector(".faded-block");
@@ -361,6 +399,7 @@
     }
   })();
 
+
   (function () {
     const isMobile = window.innerWidth < 768;
     const bodyWrapper = document.querySelector(".zoom-image-head");
@@ -374,72 +413,71 @@
     const counterTitle = document.querySelector(".zoom-counter__title");
     const counterText = document.querySelector(".zoom-counter__text");
     const counterLink = document.querySelector(".zoom-counter__read-more");
-    const typedElement = document.querySelector(".zoom-counter__subtitle");
-
+  
     let contentIsVisible = false;
     let ticking = false;
     let height = bodyWrapper.offsetHeight;
-    const typedElementString = typedElement?.innerText || "";
-    typedElement.innerHTML = "";
-
+  
+    // CSS transitions for bg2
+    bg2.style.transition = "opacity 0.5s, transform 0.5s";
+    content.style.transition = "opacity 0.5s, transform 0.5s";
+  
     bg2.style.opacity = "1";
     bg2.style.transform = "translateY(0%)";
     bg2.style.willChange = "opacity, transform";
-
+  
     const checkPosition = () => {
       const scroll = window.scrollY || window.pageYOffset;
-
+  
       if (scroll > height && !contentIsVisible) {
         showCounterContent();
       }
-
+  
       body.style.display = scroll > height ? "none" : "";
-
+  
       const scrollRatio = Math.min(scroll / height, 1);
       const opacity = Math.max(1 - scrollRatio, 0);
       const scale = 1 + scrollRatio * 0.5;
-
+  
       const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
       const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
       const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
       const translateBg2Y = (scrollRatio * (isMobile ? 10 : 15)).toFixed(2);
       const translateContentY = (scrollRatio * -15).toFixed(2);
-
-      if (bg.style.opacity !== (opacity * 2).toFixed(2)) {
-        bg.style.opacity = (opacity * 2).toFixed(2);
+  
+      const newBgOpacity = (opacity * 2).toFixed(2);
+      if (bg.style.opacity !== newBgOpacity) {
+        bg.style.opacity = newBgOpacity;
         bg.style.transform = `scale(${scale.toFixed(
           2
         )}) translate(${translateBgX}%, ${translateBgY}%)`;
       }
-
-      const bg2Opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
-      if (bg2.style.opacity !== bg2Opacity) {
-        bg2.style.opacity = bg2Opacity;
+  
+      const newBg2Opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
+      if (bg2.style.opacity !== newBg2Opacity) {
+        bg2.style.opacity = newBg2Opacity;
         bg2.style.transform = `scale(${scale.toFixed(
           2
         )}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
       }
-
+  
       const contentOpacity = Math.max(1 - scrollRatio * 1.5, 0).toFixed(2);
       if (content.style.opacity !== contentOpacity) {
         content.style.opacity = contentOpacity;
         content.style.transform = `translateY(${translateContentY}%)`;
       }
     };
-
+  
     const showCounterContent = () => {
       contentIsVisible = true;
-
-      counterBlock.style.transform = "translateX(0)";
-      counterBlock.style.opacity = "1";
-      counterTitle.style.transform = "translateY(0)";
-      counterTitle.style.opacity = "1";
-      counterText.style.transform = "translateY(0)";
-      counterText.style.opacity = "1";
-      counterLink.style.transform = "translateY(0)";
-      counterLink.style.opacity = "1";
+  
+      // Instead of manually setting transform and opacity, just toggle the "visible" class
+      counterBlock.classList.add("visible");
+      counterTitle.classList.add("visible");
+      counterText.classList.add("visible");
+      counterLink.classList.add("visible");
     };
-
+  
     const onScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
@@ -449,23 +487,255 @@
         ticking = true;
       }
     };
-
+  
     const setInitialStyles = () => {
       window.scrollTo(0, 0);
       body.style.position = "fixed";
     };
-
+  
     let resizeTimeout;
     const recalculateHeight = () => {
       height = bodyWrapper.offsetHeight;
     };
-
+  
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(recalculateHeight, 100);
     });
-
+  
     setInitialStyles();
     window.addEventListener("scroll", onScroll);
   })();
+  
+
+
+
+  // (function () {
+  //   const isMobile = window.innerWidth < 768;
+  //   const bodyWrapper = document.querySelector(".zoom-image-head");
+  //   const body = document.querySelector(".zoom-image-head__body");
+  //   const bg = document.querySelector(".zoom-image-head__bg");
+  //   const bg2 = isMobile
+  //     ? document.querySelector(".mobileSetting")
+  //     : document.querySelector(".zoom-image-head__bg2");
+  //   const content = document.querySelector(".zoom-image-head__content");
+  //   const counterBlock = document.querySelector(".zoom-counter__card");
+  //   const counterTitle = document.querySelector(".zoom-counter__title");
+  //   const counterText = document.querySelector(".zoom-counter__text");
+  //   const counterLink = document.querySelector(".zoom-counter__read-more");
+  //   const typedElement = document.querySelector(".zoom-counter__subtitle");
+  
+  //   let contentIsVisible = false;
+  //   let ticking = false;
+  //   let height = bodyWrapper.offsetHeight;
+  //   const typedElementString = typedElement?.innerText || "";
+  //   typedElement.innerHTML = "";
+  
+  //   // Use CSS transitions for smoother rendering
+  //   bg2.style.transition = "opacity 0.5s, transform 0.5s";
+  //   content.style.transition = "opacity 0.5s, transform 0.5s";
+  
+  //   bg2.style.opacity = "1";
+  //   bg2.style.transform = "translateY(0%)";
+  //   bg2.style.willChange = "opacity, transform";
+  
+  //   const checkPosition = () => {
+  //     const scroll = window.scrollY || window.pageYOffset;
+  
+  //     if (scroll > height && !contentIsVisible) {
+  //       showCounterContent();
+  //     }
+  
+  //     body.style.display = scroll > height ? "none" : "";
+  
+  //     const scrollRatio = Math.min(scroll / height, 1);
+  //     const opacity = Math.max(1 - scrollRatio, 0);
+  //     const scale = 1 + scrollRatio * 0.5;
+  
+  //     // Only apply styles if there's an actual change
+  //     const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
+  //     const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
+  //     const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
+  //     const translateBg2Y = (scrollRatio * (isMobile ? 10 : 15)).toFixed(2);
+  //     const translateContentY = (scrollRatio * -15).toFixed(2);
+  
+  //     const newBgOpacity = (opacity * 2).toFixed(2);
+  //     if (bg.style.opacity !== newBgOpacity) {
+  //       bg.style.opacity = newBgOpacity;
+  //       bg.style.transform = `scale(${scale.toFixed(
+  //         2
+  //       )}) translate(${translateBgX}%, ${translateBgY}%)`;
+  //     }
+  
+  //     const newBg2Opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
+  //     if (bg2.style.opacity !== newBg2Opacity) {
+  //       bg2.style.opacity = newBg2Opacity;
+  //       bg2.style.transform = `scale(${scale.toFixed(
+  //         2
+  //       )}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+  //     }
+  
+  //     const contentOpacity = Math.max(1 - scrollRatio * 1.5, 0).toFixed(2);
+  //     if (content.style.opacity !== contentOpacity) {
+  //       content.style.opacity = contentOpacity;
+  //       content.style.transform = `translateY(${translateContentY}%)`;
+  //     }
+  //   };
+  
+  //   const showCounterContent = () => {
+  //     contentIsVisible = true;
+  
+  //     // Add CSS transitions for counter elements for smoother appearance
+  //     counterBlock.style.transition = "transform 0.5s, opacity 0.5s";
+  //     counterTitle.style.transition = "transform 0.5s, opacity 0.5s";
+  //     counterText.style.transition = "transform 0.5s, opacity 0.5s";
+  //     counterLink.style.transition = "transform 0.5s, opacity 0.5s";
+  
+  //     counterBlock.style.transform = "translateX(0)";
+  //     counterBlock.style.opacity = "1";
+  //     counterTitle.style.transform = "translateY(0)";
+  //     counterTitle.style.opacity = "1";
+  //     counterText.style.transform = "translateY(0)";
+  //     counterText.style.opacity = "1";
+  //     counterLink.style.transform = "translateY(0)";
+  //     counterLink.style.opacity = "1";
+  //   };
+  
+  //   const onScroll = () => {
+  //     if (!ticking) {
+  //       requestAnimationFrame(() => {
+  //         checkPosition();
+  //         ticking = false;
+  //       });
+  //       ticking = true;
+  //     }
+  //   };
+  
+  //   const setInitialStyles = () => {
+  //     window.scrollTo(0, 0);
+  //     body.style.position = "fixed";
+  //   };
+  
+  //   let resizeTimeout;
+  //   const recalculateHeight = () => {
+  //     height = bodyWrapper.offsetHeight;
+  //   };
+  
+  //   window.addEventListener("resize", () => {
+  //     clearTimeout(resizeTimeout);
+  //     resizeTimeout = setTimeout(recalculateHeight, 100);
+  //   });
+  
+  //   setInitialStyles();
+  //   window.addEventListener("scroll", onScroll);
+  // })();
+  
+
+  // (function () {
+  //   const isMobile = window.innerWidth < 768;
+  //   const bodyWrapper = document.querySelector(".zoom-image-head");
+  //   const body = document.querySelector(".zoom-image-head__body");
+  //   const bg = document.querySelector(".zoom-image-head__bg");
+  //   const bg2 = isMobile
+  //     ? document.querySelector(".mobileSetting")
+  //     : document.querySelector(".zoom-image-head__bg2");
+  //   const content = document.querySelector(".zoom-image-head__content");
+  //   const counterBlock = document.querySelector(".zoom-counter__card");
+  //   const counterTitle = document.querySelector(".zoom-counter__title");
+  //   const counterText = document.querySelector(".zoom-counter__text");
+  //   const counterLink = document.querySelector(".zoom-counter__read-more");
+  //   const typedElement = document.querySelector(".zoom-counter__subtitle");
+
+  //   let contentIsVisible = false;
+  //   let ticking = false;
+  //   let height = bodyWrapper.offsetHeight;
+  //   const typedElementString = typedElement?.innerText || "";
+  //   typedElement.innerHTML = "";
+
+  //   bg2.style.opacity = "1";
+  //   bg2.style.transform = "translateY(0%)";
+  //   bg2.style.willChange = "opacity, transform";
+
+  //   const checkPosition = () => {
+  //     const scroll = window.scrollY || window.pageYOffset;
+
+  //     if (scroll > height && !contentIsVisible) {
+  //       showCounterContent();
+  //     }
+
+  //     body.style.display = scroll > height ? "none" : "";
+
+  //     const scrollRatio = Math.min(scroll / height, 1);
+  //     const opacity = Math.max(1 - scrollRatio, 0);
+  //     const scale = 1 + scrollRatio * 0.5;
+
+  //     const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
+  //     const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
+  //     const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
+  //     const translateBg2Y = (scrollRatio * (isMobile ? 10 : 15)).toFixed(2);
+  //     const translateContentY = (scrollRatio * -15).toFixed(2);
+
+  //     if (bg.style.opacity !== (opacity * 2).toFixed(2)) {
+  //       bg.style.opacity = (opacity * 2).toFixed(2);
+  //       bg.style.transform = `scale(${scale.toFixed(
+  //         2
+  //       )}) translate(${translateBgX}%, ${translateBgY}%)`;
+  //     }
+
+  //     const bg2Opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
+  //     if (bg2.style.opacity !== bg2Opacity) {
+  //       bg2.style.opacity = bg2Opacity;
+  //       bg2.style.transform = `scale(${scale.toFixed(
+  //         2
+  //       )}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+  //     }
+
+  //     const contentOpacity = Math.max(1 - scrollRatio * 1.5, 0).toFixed(2);
+  //     if (content.style.opacity !== contentOpacity) {
+  //       content.style.opacity = contentOpacity;
+  //       content.style.transform = `translateY(${translateContentY}%)`;
+  //     }
+  //   };
+
+  //   const showCounterContent = () => {
+  //     contentIsVisible = true;
+
+  //     counterBlock.style.transform = "translateX(0)";
+  //     counterBlock.style.opacity = "1";
+  //     counterTitle.style.transform = "translateY(0)";
+  //     counterTitle.style.opacity = "1";
+  //     counterText.style.transform = "translateY(0)";
+  //     counterText.style.opacity = "1";
+  //     counterLink.style.transform = "translateY(0)";
+  //     counterLink.style.opacity = "1";
+  //   };
+
+  //   const onScroll = () => {
+  //     if (!ticking) {
+  //       requestAnimationFrame(() => {
+  //         checkPosition();
+  //         ticking = false;
+  //       });
+  //       ticking = true;
+  //     }
+  //   };
+
+  //   const setInitialStyles = () => {
+  //     window.scrollTo(0, 0);
+  //     body.style.position = "fixed";
+  //   };
+
+  //   let resizeTimeout;
+  //   const recalculateHeight = () => {
+  //     height = bodyWrapper.offsetHeight;
+  //   };
+
+  //   window.addEventListener("resize", () => {
+  //     clearTimeout(resizeTimeout);
+  //     resizeTimeout = setTimeout(recalculateHeight, 100);
+  //   });
+
+  //   setInitialStyles();
+  //   window.addEventListener("scroll", onScroll);
+  // })();
 })(jQuery);
