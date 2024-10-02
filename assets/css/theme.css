@@ -1425,7 +1425,7 @@ a:not([class]):hover:after {
   background: #fff;
 }
 
-.zoom-counter__card-title {
+/* .zoom-counter__card-title {
   color: #000;
   font-size: 30px;
   font-family: "Teko", Helvetica, sans-serif;
@@ -1434,7 +1434,7 @@ a:not([class]):hover:after {
   position: relative;
   z-index: 2;
   text-align: right;
-}
+} */
 
 .zoom-counter__card-value {
   background: inherit;

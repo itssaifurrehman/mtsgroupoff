@@ -521,7 +521,7 @@
 
   .zoom-counter__text p {
     text-align: justify;
-    font-size: 12.5px;
+    font-size: 10.5px;
     margin-left: 2%;
     margin-right: 2%;
   }
@@ -866,4 +866,21 @@
 .zoom-counter__card{
   margin-bottom: 0 !important;
 }
+ .zoom-counter__card-value {
+ 
+  font-size: 170px;
+  margin-left: -5%;
+  margin-bottom: 0px !important;
+}
+.zoom-counter__card-description {
+  color: #000;
+  font-size: 14px;
+  
+}
+.zoom-counter__card-description1 {
+  color: #fff;
+  font-size: 20px;
+
+}
+
 }
