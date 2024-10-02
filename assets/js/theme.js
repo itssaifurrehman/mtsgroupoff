@@ -1,46 +1,29 @@
 (function ($) {
   "use strict";
 
-  // window.addEventListener('beforeunload', function() {
-  //   document.body.classList.add('fade-out');
-  // });
+  // function getScrollBarWidth() {
+  //   var outer = document.createElement("div");
+  //   outer.style.visibility = "hidden";
+  //   outer.style.width = "100px";
+  //   outer.style.msOverflowStyle = "scrollbar";
 
-  // const links = document.querySelectorAll('a:not([target="_blank"]):not([href^="#"])');
-  // links.forEach(link => {
-  //   link.addEventListener('click', function(e) {
-  //     e.preventDefault();
-  //     document.getElementById('loading').classList.add('active'); // Show loading animation
-  //     document.body.classList.add('fade-out'); // Trigger fade-out animation
-  //     setTimeout(() => {
-  //       window.location.href = this.href; // Navigate after fade-out
-  //     }, 500); // Match duration of the fade-out transition
-  //   });
-  // });
+  //   document.body.appendChild(outer);
+  //   var widthNoScroll = outer.offsetWidth;
 
+  //   outer.style.overflow = "scroll";
 
-  function getScrollBarWidth() {
-    var outer = document.createElement("div");
-    outer.style.visibility = "hidden";
-    outer.style.width = "100px";
-    outer.style.msOverflowStyle = "scrollbar";
+  //   var inner = document.createElement("div");
+  //   inner.style.width = "100%";
+  //   outer.appendChild(inner);
+  //   var widthWithScroll = inner.offsetWidth;
 
-    document.body.appendChild(outer);
-    var widthNoScroll = outer.offsetWidth;
+  //   outer.parentNode.removeChild(outer);
+  //   return widthNoScroll - widthWithScroll;
+  // }
 
-    outer.style.overflow = "scroll";
-
-    var inner = document.createElement("div");
-    inner.style.width = "100%";
-    outer.appendChild(inner);
-    var widthWithScroll = inner.offsetWidth;
-
-    outer.parentNode.removeChild(outer);
-    return widthNoScroll - widthWithScroll;
-  }
-
-  function detectElementScrollbarY(element) {
-    return element.scrollHeight > element.offsetHeight;
-  }
+  // function detectElementScrollbarY(element) {
+  //   return element.scrollHeight > element.offsetHeight;
+  // }
 
   function throttle(func, ms) {
     var isThrottled = false;
@@ -69,43 +52,43 @@
     return wrapper;
   }
 
-  var detectBrowser = {
-    isOpera:
-      (!!window.opr && !!opr.addons) ||
-      !!window.opera ||
-      navigator.userAgent.indexOf(" OPR/") >= 0,
-    isFirefox: typeof InstallTrigger !== "undefined",
-    isSafari:
-      /Safari/.test(navigator.userAgent) &&
-      /Apple Computer/.test(navigator.vendor),
-    isIE: false || !!document.documentMode,
-    isEdge:
-      !function () {
-        this.isIE;
-      } && !!window.StyleMedia,
-    isChrome: !!window.chrome && !!window.chrome.webstore,
-    isBlink:
-      (function () {
-        this.isChrome;
-      } ||
-        function () {
-          this.isOpera;
-        }) &&
-      !!window.CSS,
-  };
+  // var detectBrowser = {
+  //   isOpera:
+  //     (!!window.opr && !!opr.addons) ||
+  //     !!window.opera ||
+  //     navigator.userAgent.indexOf(" OPR/") >= 0,
+  //   isFirefox: typeof InstallTrigger !== "undefined",
+  //   isSafari:
+  //     /Safari/.test(navigator.userAgent) &&
+  //     /Apple Computer/.test(navigator.vendor),
+  //   isIE: false || !!document.documentMode,
+  //   isEdge:
+  //     !function () {
+  //       this.isIE;
+  //     } && !!window.StyleMedia,
+  //   isChrome: !!window.chrome && !!window.chrome.webstore,
+  //   isBlink:
+  //     (function () {
+  //       this.isChrome;
+  //     } ||
+  //       function () {
+  //         this.isOpera;
+  //       }) &&
+  //     !!window.CSS,
+  // };
 
-  var detectMobile = {
-    isMobile:
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      ),
-  };
+  // var detectMobile = {
+  //   isMobile:
+  //     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  //       navigator.userAgent
+  //     ),
+  // };
 
-  if (detectMobile.isMobile) {
-    $("html").addClass("mobile");
-  } else {
-    $("body").addClass("no-mobile");
-  }
+  // if (detectMobile.isMobile) {
+  //   $("html").addClass("mobile");
+  // } else {
+  //   $("body").addClass("no-mobile");
+  // }
 
   // var svgAnimation = throttle(function () {
   //   $(".js-motion-svg:in-viewport").each(function () {
