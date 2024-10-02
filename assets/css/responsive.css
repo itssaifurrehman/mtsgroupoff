@@ -822,6 +822,9 @@
     font-size: 12px;
     margin-top: 5%;
   }
+  .zoom-counter__subtitle {
+    margin-top: 4vh;
+  }
 
   .top-menu__menu-link {
     color: currentColor;
