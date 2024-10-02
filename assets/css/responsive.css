@@ -557,6 +557,12 @@
     padding-right: 2vh !important;
   }
 
+  .containerDemo2Ind {
+    padding-left: 2vh !important;
+    padding-right: 2vh !important;
+    margin-top: 7vh;
+  }
+
   .studio-intro-slide__title1 {
     text-align: center !important;
     margin-left: 0;
