@@ -53,6 +53,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  padding-bottom: 0 !important;
 }
 
 a {
@@ -211,6 +212,8 @@ body {
   font-size: 14px;
   background: #fff;
   color: #000;
+  padding-bottom: 0 !important;
+
 }
 
 main {
@@ -1616,6 +1619,9 @@ a:not([class]):hover:after {
 }
 
 .no-mobile {
+  padding-bottom: 0 !important;
+}
+.mobile {
   padding-bottom: 0 !important;
 }
 

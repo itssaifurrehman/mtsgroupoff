@@ -514,15 +514,15 @@
   }
 
   .zoom-counter__title {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 11px;
     text-align: center;
   }
 
   .zoom-counter__text p {
     text-align: justify;
-    font-size: 14.5px;
-    margin-left: 1%;
+    font-size: 12.5px;
+    margin-left: 2%;
     margin-right: 2%;
   }
 
@@ -822,9 +822,9 @@
     font-size: 12px;
     margin-top: 5%;
   }
-  .zoom-counter__subtitle {
+  /* .zoom-counter__subtitle {
     margin-top: 4vh;
-  }
+  } */
 
   .top-menu__menu-link {
     color: currentColor;
@@ -855,10 +855,15 @@
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
+  
   .no-mobile {
     padding-bottom: 0 !important;
   }
   .mobile {
     padding-bottom: 0 !important;
   }
+  
+.zoom-counter__card{
+  margin-bottom: 0 !important;
+}
 }
