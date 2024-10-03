@@ -531,7 +531,7 @@
     }
   
     .zoom-counters__text {
-      padding-top: 5% !important;
+      /* padding-top: 5% !important; */
       font-size: 18px;
     }
   
