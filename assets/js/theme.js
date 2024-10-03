@@ -138,12 +138,9 @@
   document.addEventListener("DOMContentLoaded", function () {
     var path = window.location.pathname.split("/").pop();
     var links = document.querySelectorAll(".top-menu__menu-link");
-    console.log("path: ", path)
-
     links.forEach(function (link) {
       var href = link.getAttribute("href");
       if (path === href) {
-        console.log("here")
         link.classList.add("top-menu__menu-link_active");
       }
     });

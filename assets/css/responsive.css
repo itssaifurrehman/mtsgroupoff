@@ -888,5 +888,24 @@
     font-size: 20px;
   
   }
+  .top-menu__menu-link_active:after {
+    opacity: 1;
+  }
+  .top-menu__menu-link_active {
+    background: linear-gradient(45deg, #f9b340, #e9c16b, #fedf9e, #dbb04e);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+  }
+  .masonry-item__title1 {
+    font-family: "Teko", Helvetica, sans-serif;
+    font-size: 35px;
+    line-height: 0.3;
+    display: block;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+  }
   
   }
