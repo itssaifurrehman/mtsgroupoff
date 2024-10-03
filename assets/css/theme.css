@@ -665,6 +665,9 @@ input {
 .containerDemo2 {
   padding-left: 10%;
 }
+.containerDemo2Ser {
+  padding-left: 10%;
+}
 .containerDemo2Ind {
   padding-left: 10%;
 }
@@ -1603,6 +1606,7 @@ a:not([class]):hover:after {
   line-height: 1.4;
   text-transform: uppercase;
   color: #666;
+  
 }
 
 .zoom-counters__text3 {

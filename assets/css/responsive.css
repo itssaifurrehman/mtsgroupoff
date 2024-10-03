@@ -537,7 +537,7 @@
   
     .zoom-counters__value {
       min-width: 0 !important;
-      font-size: 60px !important;
+      font-size: 45px !important;
     }
   
     .zoom-counter {
@@ -556,11 +556,16 @@
       padding-left: 2vh !important;
       padding-right: 2vh !important;
     }
+    .containerDemo2Ser {
+      padding-left: 2vh !important;
+      padding-right: 2vh !important;
+      padding-top: 5vh !important;
+    }
   
     .containerDemo2Ind {
       padding-left: 2vh !important;
       padding-right: 2vh !important;
-      margin-top: 7vh;
+      /* margin-top: 7vh; */
     }
   
     .studio-intro-slide__title1 {
