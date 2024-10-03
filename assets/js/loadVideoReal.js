@@ -1,1 +1,20 @@
-function isMobileDevice(){return/Mobi|Android/i.test(navigator.userAgent)}function loadMedia(){var e=document.querySelector(".Background");isMobileDevice()?e.innerHTML='<img src="assets/videos/realestate.gif" alt="Background Animation" class="showimg">':e.innerHTML='\n          <video width="100%" autoplay loop muted playsinline>\n              <source src="assets/videos/bgHeaderv5.mp4" type="video/mp4">\n          </video>\n      '}loadMedia();
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+  
+  function loadMedia() {
+    var backgroundElement = document.querySelector('.Background');
+  
+    if (isMobileDevice()) {
+        console.log("here")
+        backgroundElement.innerHTML = '<img src="assets/videos/realestate.gif" alt="Background Animation" class="showimg">';
+    } else {
+        backgroundElement.innerHTML = `
+            <video width="100%" autoplay loop muted playsinline>
+                <source src="assets/videos/bgHeaderv5.mp4" type="video/mp4">
+            </video>
+        `;
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", loadMedia);
