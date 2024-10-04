@@ -11,7 +11,7 @@ function isMobileDevice() {
     } else {
         backgroundElement.innerHTML = `
             <video width="100%" autoplay loop muted playsinline>
-                <source src="assets/videos/bgHeaderv5.mp4" type="video/mp4">
+                <source src="assets/videos/realEstate.mp4" type="video/mp4">
             </video>
         `;
     }
