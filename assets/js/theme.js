@@ -250,30 +250,7 @@
         element.innerHTML = newContent;
       }
     }
-  };
-
-  (function () {
-    var bodyElement = document.querySelector("body");
-    var footerElement = document.querySelector(".footer");
-
-    if (footerElement) {
-      var setPadding = function setPadding() {
-        bodyElement.style.paddingBottom = "".concat(
-          footerElement.offsetHeight,
-          "px"
-        );
-      };
-
-      var onWindowResize = function onWindowResize() {
-        setPadding();
-      };
-
-      footerElement.classList.add("footer_fixed");
-      setPadding();
-      window.addEventListener("resize", onWindowResize);
-    }
-  })();
-
+  };      
   (function () {
     const isMobile = window.innerWidth < 768;
     const bodyWrapper = document.querySelector(".zoom-image-head");
@@ -290,29 +267,15 @@
     let contentIsVisible = false;
     let ticking = false;
     let height = bodyWrapper.offsetHeight;
-    const updateTransforms = (scrollRatio) => {
-      const opacity = Math.max(1 - scrollRatio, 0);
-      const scale = 1 + scrollRatio * 0.5;
-      const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
-      const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
-      const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
-      const translateBg2Y = (scrollRatio * (isMobile ? 10 : 15)).toFixed(2);
-      const translateContentY = (scrollRatio * -15).toFixed(2);
-      // Use requestAnimationFrame for smoother performance
-      requestAnimationFrame(() => {
-        bg.style.opacity = (opacity * 2).toFixed(2);
-        bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
   
-        const bg2Opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
-        bg2.style.opacity = bg2Opacity;
-        bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+    // Precalculate values to avoid recalculating on every scroll
+    const maxTranslateBgX = isMobile ? -5 : -8;  // Decreased translation values for faster animations
+    const maxTranslateBgY = isMobile ? -4 : -6;
+    const maxTranslateBg2X = isMobile ? 1 : 2;
+    const maxTranslateBg2Y = isMobile ? 4 : 8;
+    const maxTranslateContentY = -8;  // Faster content movement
   
-        const contentOpacity = Math.max(1 - scrollRatio * 1.5, 0).toFixed(2);
-        content.style.opacity = contentOpacity;
-        content.style.transform = `translateY(${translateContentY}%)`;
-      });
-    };
-  
+    // Scroll position check and transformation handler
     const checkPosition = () => {
       const scroll = window.scrollY || window.pageYOffset;
   
@@ -322,9 +285,29 @@
   
       body.style.display = scroll > height ? "none" : "";
   
-      const scrollRatio = Math.min(scroll / height, 1);
+      const scrollRatio = Math.min(scroll / (height / 2), 1);  // Making animation finish faster by reducing height threshold
       updateTransforms(scrollRatio);
     };
+    const updateTransforms = (scrollRatio) => {
+      const opacity = Math.max(1 - scrollRatio, 0);
+      const scale = 1 + scrollRatio * 0.3;  // Reduced scale factor for faster animation
+  
+      const translateBgX = (scrollRatio * maxTranslateBgX).toFixed(2);
+      const translateBgY = (scrollRatio * maxTranslateBgY).toFixed(2);
+      const translateBg2X = (scrollRatio * maxTranslateBg2X).toFixed(2);
+      const translateBg2Y = (scrollRatio * maxTranslateBg2Y).toFixed(2);
+      const translateContentY = (scrollRatio * maxTranslateContentY).toFixed(2);
+  
+      bg.style.opacity = (opacity * 2).toFixed(2);
+      bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
+  
+      bg2.style.opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
+      bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
+  
+      content.style.opacity = Math.max(1 - scrollRatio * 1.5, 0).toFixed(2);
+      content.style.transform = `translateY(${translateContentY}%)`;
+    };
+  
     const showCounterContent = () => {
       contentIsVisible = true;
       counterBlock.classList.add("visible");
@@ -341,123 +324,23 @@
         ticking = true;
       }
     };
+    // Set the page to the top and lock the body position
     const setInitialStyles = () => {
       window.scrollTo(0, 0);
       body.style.position = "fixed";
     };
+    // Handle window resize with debounced recalculation
+    let resizeTimeout;
     const recalculateHeight = () => {
       height = bodyWrapper.offsetHeight;
     };
-    let resizeTimeout;
+  
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(recalculateHeight, 100);
     });
+    // Initialize everything
     setInitialStyles();
     window.addEventListener("scroll", onScroll);
   })();
-    
-
-  // (function () {
-  //   const isMobile = window.innerWidth < 768;
-  //   const bodyWrapper = document.querySelector(".zoom-image-head");
-  //   const body = document.querySelector(".zoom-image-head__body");
-  //   const bg = document.querySelector(".zoom-image-head__bg");
-  //   const bg2 = isMobile
-  //     ? document.querySelector(".mobileSetting")
-  //     : document.querySelector(".zoom-image-head__bg2");
-  //   const content = document.querySelector(".zoom-image-head__content");
-  //   const counterBlock = document.querySelector(".zoom-counter__card");
-  //   const counterTitle = document.querySelector(".zoom-counter__title");
-  //   const counterText = document.querySelector(".zoom-counter__text");
-  //   const counterLink = document.querySelector(".zoom-counter__read-more");
-
-  //   let contentIsVisible = false;
-  //   let ticking = false;
-  //   let height = bodyWrapper.offsetHeight;
-
-  //   bg.style.willChange = "opacity, transform";
-  //   bg2.style.willChange = "opacity, transform";
-  //   content.style.willChange = "opacity, transform";
-
-  //   const checkPosition = () => {
-  //     const scroll = window.scrollY || window.pageYOffset;
-
-  //     if (scroll > height && !contentIsVisible) {
-  //       showCounterContent();
-  //     }
-
-  //     body.style.display = scroll > height ? "none" : "";
-
-  //     const scrollRatio = Math.min(scroll / height, 1);
-
-  //     updateTransforms(scrollRatio);
-  //   };
-
-  //   const updateTransforms = (scrollRatio) => {
-  //     const opacity = Math.max(1 - scrollRatio, 0);
-  //     const scale = 1 + scrollRatio * 0.5;
-
-  //     const translateBgX = (scrollRatio * (isMobile ? -10 : -15)).toFixed(2);
-  //     const translateBgY = (scrollRatio * (isMobile ? -8 : -12)).toFixed(2);
-  //     const translateBg2X = (scrollRatio * (isMobile ? 2 : 4)).toFixed(2);
-  //     const translateBg2Y = (scrollRatio * (isMobile ? 10 : 15)).toFixed(2);
-  //     const translateContentY = (scrollRatio * -15).toFixed(2);
-
-  //     bg.style.opacity = (opacity * 2).toFixed(2);
-  //     bg.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBgX}%, ${translateBgY}%)`;
-
-  //     const bg2Opacity = Math.max(1 - scrollRatio * 2, 0).toFixed(2);
-  //     bg2.style.opacity = bg2Opacity;
-  //     bg2.style.transform = `scale(${scale.toFixed(2)}) translate(${translateBg2X}%, ${translateBg2Y}%)`;
-
-  //     const contentOpacity = Math.max(1 - scrollRatio * 1.5, 0).toFixed(2);
-  //     content.style.opacity = contentOpacity;
-  //     content.style.transform = `translateY(${translateContentY}%)`;
-  //   };
-
-  //   const showCounterContent = () => {
-  //     contentIsVisible = true;
-
-  //     counterBlock.classList.add("visible");
-  //     counterTitle.classList.add("visible");
-  //     counterText.classList.add("visible");
-  //     counterLink.classList.add("visible");
-
-  //     setTimeout(() => {
-  //       bg.style.willChange = "";
-  //       bg2.style.willChange = "";
-  //       content.style.willChange = "";
-  //     }, 500);
-  //   };
-
-  //   const onScroll = () => {
-  //     if (!ticking) {
-  //       requestAnimationFrame(() => {
-  //         checkPosition();
-  //         ticking = false;
-  //       });
-  //       ticking = true;
-  //     }
-  //   };
-
-  //   const setInitialStyles = () => {
-  //     window.scrollTo(0, 0);
-  //     body.style.position = "fixed";
-  //   };
-
-  //   let resizeTimeout;
-  //   const recalculateHeight = () => {
-  //     height = bodyWrapper.offsetHeight;
-  //   };
-
-  //   window.addEventListener("resize", () => {
-  //     clearTimeout(resizeTimeout);
-  //     resizeTimeout = setTimeout(recalculateHeight, 100);
-  //   });
-
-  //   setInitialStyles();
-  //   window.addEventListener("scroll", onScroll);
-  // })();
-
 })(jQuery);

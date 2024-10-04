@@ -4,6 +4,12 @@
   font: inherit;
   box-sizing: border-box;
 }
+/* Ensure smooth transitions for the elements */
+.zoom-image-head__bg, .zoom-image-head__bg2, .zoom-image-head__content {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
 
 article,
 aside,
