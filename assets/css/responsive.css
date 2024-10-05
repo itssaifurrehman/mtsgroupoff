@@ -497,13 +497,13 @@
     }
   
     .zoom-image-head__bg2 {
-      position: absolute;   /* Absolute positioning to allow free movement */
-      bottom: 0;           /* Stick to the bottom */
+      /* position: absolute; 
+      bottom: 0;           
       left: 0;
       right: 0;
-      width: 100%;         /* Full width */
-      height: auto;        /* Maintain aspect ratio */
-      z-index: -1;         
+      width: 100%;        
+      height: auto;       
+      z-index: -1;          */
     }
   
     .whatsapp-icon {
@@ -601,18 +601,18 @@
     }
   
     .mobileSetting {
-      /* position: absolute; 
+      position: absolute; 
       bottom: 0;           
       left: 0;
       right: 0;
       width: 100%;         
       height: auto;        
-      z-index: 1000;          */
-      bottom: 0;
+      z-index: 1000;         
+      /* bottom: 0;
       right: 0;
       z-index: 9999;
-      display: flex;
-      position: inherit;
+      display: absolute;
+      position: inherit; */
     }
   
     .zoom-image-head__bg {
