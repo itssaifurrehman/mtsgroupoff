@@ -40,7 +40,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     if (country.length < 3 || country.length > 25) {
         errorMessages.push("Country must be between 3 and 25 characters.");
     }
-    if (!validateEmail(email)) {
+    if (email.length < 3 || email.length > 25) {
         errorMessages.push("Email is invalid.");
     }
     if (contactNumber.length < 3 || contactNumber.length > 25) {
@@ -70,8 +70,3 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         });
 });
 
-// Email validation function
-function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
