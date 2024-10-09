@@ -117,19 +117,16 @@
                 <div class="single-post__title">Get Contacted</div>
                 <form
                   class="contact-block__form"
-                  id="myForm"
-                  action="https://forms.gle/P3gJq84P9ug2Wx3Z7"
+                  id="contactForm"
                   method="POST"
                 >
-                <!-- action="https://docs.google.com/forms/d/e/1FAIpQLSeQmzA3Tedln7QE7ojGMw16GYZCRuyGXv9U7xjTewjbd57jIA/viewform?usp=sf_link" -->
-
                   <div class="row">
                     <div class="col-12 col-sm-6">
                       <input
                         class="contact-block__input-text"
                         placeholder="Full Name"
                         type="text"
-                        name="entry.592156086"
+                        name="fullName"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -137,7 +134,7 @@
                         class="contact-block__input-text"
                         placeholder="Address"
                         type="text"
-                        name="entry.808391714"
+                        name="address"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -145,7 +142,7 @@
                         class="contact-block__input-text"
                         placeholder="City"
                         type="text"
-                        name="entry.1679628376"
+                        name="city"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -153,7 +150,7 @@
                         class="contact-block__input-text"
                         placeholder="State"
                         type="text"
-                        name="entry.1203055763"
+                        name="state"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -161,7 +158,7 @@
                         class="contact-block__input-text"
                         placeholder="Zip Code"
                         type="text"
-                        name="entry.1964822440"
+                        name="zipCode"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -169,7 +166,7 @@
                         class="contact-block__input-text"
                         placeholder="Country"
                         type="text"
-                        name="entry.1310778604"
+                        name="country"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -177,7 +174,7 @@
                         class="contact-block__input-text"
                         placeholder="Email"
                         type="text"
-                        name="entry.1029135869"
+                        name="email"
                       />
                     </div>
                     <div class="col-12 col-sm-6">
@@ -185,14 +182,14 @@
                         class="contact-block__input-text"
                         placeholder="Contact Number"
                         type="text"
-                        name="entry.610173227"
+                        name="contactNumber"
                       />
                     </div>
                     <div class="col-12">
                       <textarea
                         class="contact-block__input-textarea"
                         placeholder="Your Message"
-                        name="entry.1436436798"
+                        name="message"
                       ></textarea>
                       <div class="fixed-bottom-center">
                         <button class="send-now-btn">Send Now</button>
@@ -300,6 +297,30 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS
+      (function() {
+          emailjs.init("vxhrtAXNgLQLhUKYi"); // Replace with your EmailJS User ID
+      })();
+
+      // Handle form submission
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+
+          const serviceID = 'service_vdzif6t'; // Replace with your Service ID
+          const templateID = 'template_4t6hsce'; // Replace with your Template ID
+
+          // Send the email
+          emailjs.sendForm(serviceID, templateID, this)
+              .then(() => {
+                  alert('Your message has been sent!'); // Notify the user
+                  document.getElementById('contactForm').reset(); // Reset the form
+              }, (err) => {
+                  alert(JSON.stringify(err)); // Show error
+              });
+      });
+  </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.viewport.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
