@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init("vxhrtAXNgLQLhUKYi"); // Replace with your EmailJS User ID
+    emailjs.init("e_LWOFaM8EeB6Wpmp"); // Replace with your EmailJS User ID
 })();
 
 // Handle form submission
@@ -57,8 +57,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }
 
     // If all validations pass, send the email
-    const serviceID = 'service_e0ux73n'; // Replace with your Service ID
-    const templateID = 'template_4t6hsce'; // Replace with your Template ID
+    const serviceID = 'service_7zoo1jr'; // Replace with your Service ID
+    const templateID = 'template_t370afr'; // Replace with your Template ID
 
     // Send the email
     emailjs.sendForm(serviceID, templateID, this)
