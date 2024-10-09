@@ -74,8 +74,9 @@
   
   @media (min-width: 1280px) and (max-width: 1285px) {
     .zoom-image-head__bg2 {
-        margin-top: -8% !important;
-        height: auto !important; /* You can set it to auto or any other value you need */
+      transform: scale(1.12);
+        /* margin-top: -8% !important;
+        height: auto !important;  */
     }
 }
 
