@@ -31,7 +31,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     if (city.length < 3 || city.length > 25) {
         errorMessages.push("City must be between 3 and 25 characters.");
     }
-    if (state.length < 3 || state.length > 25) {
+    if (state.length < 2 || state.length > 25) {
         errorMessages.push("State must be between 3 and 25 characters.");
     }
     if (zipCode.length < 3 || zipCode.length > 25) {
