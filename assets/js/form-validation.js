@@ -57,7 +57,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }
 
     // If all validations pass, send the email
-    const serviceID = 'service_vdzif6t'; // Replace with your Service ID
+    const serviceID = 'service_e0ux73n'; // Replace with your Service ID
     const templateID = 'template_4t6hsce'; // Replace with your Template ID
 
     // Send the email
