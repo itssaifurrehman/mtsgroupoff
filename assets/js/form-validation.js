@@ -1,88 +1,77 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to validate email format
-    function isValidEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
-        return regex.test(email);
+// Initialize EmailJS
+(function() {
+    emailjs.init("vxhrtAXNgLQLhUKYi"); // Replace with your EmailJS User ID
+})();
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Form fields
+    const fullName = this.fullName.value.trim();
+    const address = this.address.value.trim();
+    const city = this.city.value.trim();
+    const state = this.state.value.trim();
+    const zipCode = this.zipCode.value.trim();
+    const country = this.country.value.trim();
+    const email = this.email.value.trim();
+    const contactNumber = this.contactNumber.value.trim();
+    const message = this.message.value.trim();
+
+    // Error messages array
+    const errorMessages = [];
+
+    // Validation checks
+    if (fullName.length < 3 || fullName.length > 25) {
+        errorMessages.push("Full Name must be between 3 and 25 characters.");
+    }
+    if (address.length < 3 || address.length > 25) {
+        errorMessages.push("Address must be between 3 and 25 characters.");
+    }
+    if (city.length < 3 || city.length > 25) {
+        errorMessages.push("City must be between 3 and 25 characters.");
+    }
+    if (state.length < 3 || state.length > 25) {
+        errorMessages.push("State must be between 3 and 25 characters.");
+    }
+    if (zipCode.length < 3 || zipCode.length > 25) {
+        errorMessages.push("Zip Code must be between 3 and 25 characters.");
+    }
+    if (country.length < 3 || country.length > 25) {
+        errorMessages.push("Country must be between 3 and 25 characters.");
+    }
+    if (!validateEmail(email)) {
+        errorMessages.push("Email is invalid.");
+    }
+    if (contactNumber.length < 3 || contactNumber.length > 25) {
+        errorMessages.push("Contact Number must be between 3 and 25 characters.");
+    }
+    if (message.length < 3 || message.length > 200) {
+        errorMessages.push("Message must be between 3 and 200 characters.");
     }
 
-    // Function to validate input length
-    function isValidLength(value, minLength, maxLength) {
-        return value.trim().length >= minLength && value.trim().length <= maxLength;
+    // Check if there are any error messages
+    if (errorMessages.length > 0) {
+        alert(errorMessages.join("\n")); // Show all error messages
+        return; // Stop form submission
     }
 
-    // Function to validate the entire form
-    function validateForm(event) {
-        event.preventDefault(); // Prevent form submission
+    // If all validations pass, send the email
+    const serviceID = 'service_vdzif6t'; // Replace with your Service ID
+    const templateID = 'template_4t6hsce'; // Replace with your Template ID
 
-        // Get form inputs
-        const fullName = document.querySelector('input[name="fullName"]').value;
-        const address = document.querySelector('input[name="address"]').value;
-        const city = document.querySelector('input[name="city"]').value;
-        const state = document.querySelector('input[name="state"]').value;
-        const zipCode = document.querySelector('input[name="zipCode"]').value;
-        const country = document.querySelector('input[name="country"]').value;
-        const email = document.querySelector('input[name="email"]').value;
-        const contactNumber = document.querySelector('input[name="contactNumber"]').value;
-        const message = document.querySelector('textarea[name="message"]').value;
-
-        // Define minimum and maximum lengths
-        const minLength = 3; // Set a minimum length for input fields
-        const maxLength = 25; // Set a maximum length for input fields
-        const maxMessageLength = 200; // Set a maximum length for message
-
-        // Validation flags
-        let isValid = true;
-        let errors = [];
-
-        // Validate each input
-        if (!isValidLength(fullName, minLength, maxLength)) {
-            isValid = false;
-            errors.push('Full Name must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidLength(address, minLength, maxLength)) {
-            isValid = false;
-            errors.push('Address must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidLength(city, minLength, maxLength)) {
-            isValid = false;
-            errors.push('City must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidLength(state, minLength, maxLength)) {
-            isValid = false;
-            errors.push('State must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidLength(zipCode, minLength, maxLength)) {
-            isValid = false;
-            errors.push('Zip Code must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidLength(country, minLength, maxLength)) {
-            isValid = false;
-            errors.push('Country must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidEmail(email)) {
-            isValid = false;
-            errors.push('Email is not valid.');
-        }
-        if (!isValidLength(contactNumber, minLength, maxLength)) {
-            isValid = false;
-            errors.push('Contact Number must be between ' + minLength + ' and ' + maxLength + ' characters long.');
-        }
-        if (!isValidLength(message, 0, maxMessageLength)) {
-            isValid = false;
-            errors.push('Message must not exceed ' + maxMessageLength + ' characters.');
-        }
-
-        // Show errors or submit the form
-        if (isValid) {
-            // Submit the form (you can integrate your email sending function here)
-            // alert('Form submitted successfully!');
-            document.getElementById('contactForm').reset(); // Reset the form after submission
-        } else {
-            // Display error messages
-            alert(errors.join('\n'));
-        }
-    }
-
-    // Attach the validateForm function to the form submission
-    document.getElementById('contactForm').addEventListener('submit', validateForm);
+    // Send the email
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            alert('Your message has been sent!'); // Notify the user
+            document.getElementById('contactForm').reset(); // Reset the form
+        }, (err) => {
+            alert(JSON.stringify(err)); // Show error
+        });
 });
+
+// Email validation function
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}

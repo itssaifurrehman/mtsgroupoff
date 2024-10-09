@@ -298,29 +298,6 @@
       </footer>
     </div>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      // Initialize EmailJS
-      (function() {
-          emailjs.init("vxhrtAXNgLQLhUKYi"); // Replace with your EmailJS User ID
-      })();
-
-      // Handle form submission
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent default form submission
-
-          const serviceID = 'service_vdzif6t'; // Replace with your Service ID
-          const templateID = 'template_4t6hsce'; // Replace with your Template ID
-
-          // Send the email
-          emailjs.sendForm(serviceID, templateID, this)
-              .then(() => {
-                  alert('Your message has been sent!'); // Notify the user
-                  document.getElementById('contactForm').reset(); // Reset the form
-              }, (err) => {
-                  alert(JSON.stringify(err)); // Show error
-              });
-      });
-  </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/form-validation.js"></script>
     <script src="assets/js/jquery.viewport.min.js"></script>
